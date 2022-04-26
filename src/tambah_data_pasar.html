@@ -135,13 +135,13 @@
         <hr />
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="index.html" class="nav-link text-white" aria-current="page">
+            <a href="user_index.html" class="nav-link text-white" aria-current="page">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#home" /></svg>
               Home
             </a>
           </li>
           <li>
-            <a href="user_index.html" class="nav-link text-white">
+            <a href="index.html" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2" /></svg>
               Dashboard
             </a>
@@ -162,8 +162,8 @@
             </button>
             <div class="collapse" id="dashboard-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="#" class="link-dark rounded text-white">Data Pasar</a></li>
-                <li><a href="#" class="link-dark rounded text-white">Data Pedagang</a></li>
+                <li><a href="data_pasar.html" class="link-dark rounded text-white">Data Pasar</a></li>
+                <li><a href="data_pedagang.html" class="link-dark rounded text-white">Data Pedagang</a></li>
               </ul>
             </div>
           </li>
@@ -176,8 +176,8 @@
             </button>
             <div class="collapse" id="orders-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="#" class="link-dark rounded text-white">Data Pasar</a></li>
-                <li><a href="#" class="link-dark rounded text-white">Data Pedagang</a></li>
+                <li><a href="report_data_pasar.html" class="link-dark rounded text-white">Data Pasar</a></li>
+                <li><a href="report_data_pedagang.html" class="link-dark rounded text-white">Data Pedagang</a></li>
               </ul>
             </div>
           </li>
@@ -203,58 +203,76 @@
         <div class="head text-center"><b>Tambah Data Pasar</b></div>
         <button class="btn btn-danger">Back</button>
 
-        <div class="col-lg-8">
-          <form action="">
-            <div class="mb-3">
-              <label for="nomorRegistrasi" class="form-label">Nomor Registrasi</label>
-              <input type="text" name="" id="nomorRegistrasi" class="form-control" autocomplete="off" />
+        <div class="row">
+          <div class="col-10">
+            <div class="mb-3 row">
+              <label for="nomorRegistrasi" class="col-sm-2 col-form-label">Nomor Registrasi</label>
+              <div class="col-sm-8">
+                <input type="text" name="" id="nomorRegistrasi" class="form-control" autocomplete="off" />
+              </div>
             </div>
 
-            <div class="mb-3">
-              <label for="namaPasar" class="form-label">Nama Pasar</label>
-              <input type="text" name="" id="namaPasar" class="form-control" autocomplete="off" />
+            <div class="mb-3 row">
+              <label for="namaPasar" class="col-sm-2 col-form-label">Nama Pasar</label>
+              <div class="col-sm-8">
+                <input type="text" name="" id="namaPasar" class="form-control" autocomplete="off" />
+              </div>
             </div>
 
-            <div class="mb-3">
-              <label for="tanggalBerdiri" class="form-label">Tanggal Berdiri</label>
-              <input type="date" name="" id="tanggalBerdiri" class="form-control" autocomplete="off" />
+            <div class="mb-3 row">
+              <label for="tanggalBerdiri" class="col-sm-2 col-form-label">Tanggal Berdiri</label>
+              <div class="col-sm-8">
+                <input type="date" name="" id="tanggalBerdiri" class="form-control" autocomplete="off" />
+              </div>
             </div>
 
-            <div class="mb-3">
-              <label for="status" class="form-label">Status</label>
-              <input type="text" name="" id="status" class="form-control" autocomplete="off" />
+            <div class="mb-3 row">
+              <label for="status" class="col-sm-2 col-form-label">Status</label>
+              <div class="col-sm-8">
+                <input type="text" name="" id="status" class="form-control" autocomplete="off" />
+              </div>
             </div>
 
-            <div class="mb-3">
-              <label for="kelas" class="form-label">Kelas</label>
-              <input type="text" name="" id="kelas" class="form-control" autocomplete="off" />
+            <div class="mb-3 row">
+              <label for="kelas" class="col-sm-2 col-form-label">Kelas</label>
+              <div class="col-sm-8">
+                <input type="text" name="" id="kelas" class="form-control" autocomplete="off" />
+              </div>
             </div>
 
-            <div class="mb-3">
-              <label for="lokasi" class="form-label">Lokasi</label>
-              <input type="text" name="" id="lokasi" class="form-control" autocomplete="off" />
+            <div class="mb-3 row">
+              <label for="lokasi" class="col-sm-2 col-form-label">Lokasi</label>
+              <div class="col-sm-8">
+                <input type="text" name="" id="lokasi" class="form-control" autocomplete="off" />
+              </div>
             </div>
 
-            <div class="mb-3">
-              <label for="luas" class="form-label">Luas</label>
-              <input type="text" name="" id="luas" class="form-control" autocomplete="off" />
+            <div class="mb-3 row">
+              <label for="luas" class="col-sm-2 col-form-label">Luas</label>
+              <div class="col-sm-8">
+                <input type="text" name="" id="luas" class="form-control" autocomplete="off" />
+              </div>
             </div>
 
-            <div class="mb-3">
-              <label for="iuran" class="form-label">Iuran/bulan</label>
-              <input type="text" name="" id="iuran" class="form-control" autocomplete="off" />
+            <div class="mb-3 row">
+              <label for="iuran" class="col-sm-2 col-form-label">Iuran/bulan</label>
+              <div class="col-sm-8">
+                <input type="text" name="" id="iuran" class="form-control" autocomplete="off" />
+              </div>
             </div>
 
-            <div class="mb-3">
-              <label for="foto" class="form-label">Foto</label>
-              <input type="file" name="" id="foto" class="form-control" autocomplete="off" />
+            <div class="mb-3 row">
+              <label for="foto" class="col-sm-2 col-form-label">Foto</label>
+              <div class="col-sm-8">
+                <input type="file" name="" id="foto" class="form-control" autocomplete="off" />
+              </div>
             </div>
 
             <div class="mb-3">
               <button class="btn btn-danger">Cancel</button>
               <button class="btn btn-success">Save</button>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </main>
