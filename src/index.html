@@ -9,8 +9,6 @@
     <title>Admin</title>
     <link rel="icon" href="img/logo.png" />
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/" />
-
     <!-- Bootstrap core CSS -->
     <link href="../src/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -32,6 +30,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/index.css" rel="stylesheet" />
+    <link href="css/sidebar.css" rel="stylesheet" />
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
@@ -127,20 +126,20 @@
 
     <main>
       <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
           <img src="img/logo.png" width="40" height="40" />
           <span class="fs-4">Aplikasi Pasar</span>
         </a>
         <hr />
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link text-white" aria-current="page">
+            <a href="user_index.html" class="nav-link text-white" aria-current="page">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#home" /></svg>
               Home
             </a>
           </li>
           <li>
-            <a href="user_index.html" class="nav-link text-white">
+            <a href="#" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2" /></svg>
               Dashboard
             </a>
@@ -160,8 +159,8 @@
             </button>
             <div class="collapse" id="dashboard-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="#" class="link-dark rounded text-white">Data Pasar</a></li>
-                <li><a href="#" class="link-dark rounded text-white">Data Pedagang</a></li>
+                <li><a href="data_pasar.html" class="link-dark rounded text-white">Data Pasar</a></li>
+                <li><a href="data_pedagang.html" class="link-dark rounded text-white">Data Pedagang</a></li>
               </ul>
             </div>
           </li>
@@ -174,8 +173,8 @@
             </button>
             <div class="collapse" id="orders-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="#" class="link-dark rounded text-white">Data Pasar</a></li>
-                <li><a href="#" class="link-dark rounded text-white">Data Pedagang</a></li>
+                <li><a href="report_data_pasar.html" class="link-dark rounded text-white">Data Pasar</a></li>
+                <li><a href="report_data_pedagang.html" class="link-dark rounded text-white">Data Pedagang</a></li>
               </ul>
             </div>
           </li>
