@@ -1,0 +1,10 @@
+.head_container {
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.head {
+  font-size: 2rem;
+  padding-top: 40px;
+}

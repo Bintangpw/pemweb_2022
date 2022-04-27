@@ -6,13 +6,13 @@
     <meta name="description" content="" />
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
     <meta name="generator" content="Hugo 0.88.1" />
-    <title>Admin</title>
+    <title>User</title>
     <link rel="icon" href="img/logo.png" />
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/" />
 
     <!-- Bootstrap core CSS -->
-    <link href="../src/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <style>
       .bd-placeholder-img {
@@ -31,7 +31,7 @@
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="css/data_pasar.css" rel="stylesheet" />
+    <link href="css/report_pasar.css" rel="stylesheet" />
     <link href="css/sidebar.css" rel="stylesheet" />
   </head>
   <body>
@@ -135,7 +135,7 @@
         <hr />
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="user/user_index.html" class="nav-link text-white" aria-current="page">
+            <a href="user_index.html" class="nav-link text-white" aria-current="page">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#home" /></svg>
               Home
             </a>
@@ -144,12 +144,6 @@
             <a href="index.html" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2" /></svg>
               Dashboard
-            </a>
-          </li>
-          <li>
-            <a href="kon_app.html" class="nav-link text-white">
-              <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid" /></svg>
-              Konfigurasi Aplikasi
             </a>
           </li>
           <li class="mb-1">
@@ -185,7 +179,7 @@
         <div class="dropdown">
           <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2" />
-            <strong>Admin</strong>
+            <strong>User</strong>
           </a>
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="#">Settings</a></li>
@@ -199,75 +193,62 @@
       <div class="b-example-divider"></div>
 
       <div class="container">
-        <div class="head text-center"><b>Data Pasar</b></div>
-        <a class="btn btn-success" href="tambah_data_pasar.html">Tambah</a>
+        <div class="head text-center"><b>Report Data Pasar</b></div>
+        <button class="btn btn-success">Print</button>
+
         <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>No. Registrasi</th>
-                    <th>Nama Pasar</th>
-                    <th>Status</th>
-                    <th>Kelas</th>
-                    <th>Lokasi</th>
-                    <th>Iuran</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-    
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>001</td>
-                    <td>Pasar Gede</td>
-                    <td></td>
-                    <td></td>
-                    <td>jalan disana</td>
-                    <td></td>
-                    <td>
-                        <a class="btn btn-primary btn-sm" href="informasi_pasar.html">Lihat</a>
-                        <a class="btn btn-warning btn-sm" href="edit_data_pasar.html">Edit</a>
-                        <a class="btn btn-danger btn-sm">Hapus</a>
-                    </td>
-                </tr>
-    
-                <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>Pasar Klewer</td>
-                    <td></td>
-                    <td></td>
-                    <td>jalan disini</td>
-                    <td></td>
-                    <td>
-                        <a class="btn btn-primary btn-sm" href="informasi_pasar.html">Lihat</a>
-                        <a class="btn btn-warning btn-sm" href="edit_data_pasar.html">Edit</a>
-                        <a class="btn btn-danger btn-sm">Hapus</a>
-                    </td>
-                </tr>
-    
-                <tr>
-                    <td>3</td>
-                    <td>003</td>
-                    <td>Pasar Triwindu</td>
-                    <td></td>
-                    <td></td>
-                    <td>jalan disitu</td>
-                    <td></td>
-                    <td>
-                        <a class="btn btn-primary btn-sm" href="informasi_pasar.html">Lihat</a>
-                        <a class="btn btn-warning btn-sm" href="edit_data_pasar.html">Edit</a>
-                        <a class="btn btn-danger btn-sm">Hapus</a>
-                    </td>
-                </tr>
-            </tbody>
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>No. Registrasi</th>
+              <th>Nama Pasar</th>
+              <th>Status</th>
+              <th>Kelas</th>
+              <th>Lokasi</th>
+              <th>Iuran</th>
+              <th>Luas</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>001</td>
+              <td>Pasar Gede</td>
+              <td>Pasar Induk</td>
+              <td>I.C</td>
+              <td>Surakarta</td>
+              <td>15.000</td>
+              <td>1000 m<sup>2</sup></td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>002</td>
+              <td>Pasar Klewer</td>
+              <td>Pasar Induk</td>
+              <td>I.B</td>
+              <td>Surakarta</td>
+              <td>20.000</td>
+              <td>1500 m<sup>2</sup></td>
+            </tr>
+
+            <tr>
+              <td>3</td>
+              <td>003</td>
+              <td>Pasar Triwindu</td>
+              <td>Pasar Induk</td>
+              <td>I.C</td>
+              <td>Surakarta</td>
+              <td>18.000</td>
+              <td>1200 m<sup>2</sup></td>
+            </tr>
+          </tbody>
         </table>
       </div>
-      </div>
-      
     </main>
 
-    <script src="../src/assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/sidebars.js"></script>
   </body>
 </html>

@@ -6,13 +6,13 @@
     <meta name="description" content="" />
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
     <meta name="generator" content="Hugo 0.88.1" />
-    <title>Admin</title>
+    <title>User</title>
     <link rel="icon" href="img/logo.png" />
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/" />
 
     <!-- Bootstrap core CSS -->
-    <link href="../src/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <style>
       .bd-placeholder-img {
@@ -31,7 +31,7 @@
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="css/data_pasar.css" rel="stylesheet" />
+    <link href="css/info_pasar.css" rel="stylesheet" />
     <link href="css/sidebar.css" rel="stylesheet" />
   </head>
   <body>
@@ -128,28 +128,22 @@
 
     <main>
       <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px">
-        <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
           <img src="img/logo.png" width="40" height="40" />
           <span class="fs-4">Aplikasi Pasar</span>
         </a>
         <hr />
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="user/user_index.html" class="nav-link text-white" aria-current="page">
+            <a href="index.html" class="nav-link text-white" aria-current="page">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#home" /></svg>
               Home
             </a>
           </li>
           <li>
-            <a href="index.html" class="nav-link text-white">
+            <a href="user_index.html" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2" /></svg>
               Dashboard
-            </a>
-          </li>
-          <li>
-            <a href="kon_app.html" class="nav-link text-white">
-              <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid" /></svg>
-              Konfigurasi Aplikasi
             </a>
           </li>
           <li class="mb-1">
@@ -185,7 +179,7 @@
         <div class="dropdown">
           <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2" />
-            <strong>Admin</strong>
+            <strong>User</strong>
           </a>
           <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
             <li><a class="dropdown-item" href="#">Settings</a></li>
@@ -199,75 +193,110 @@
       <div class="b-example-divider"></div>
 
       <div class="container">
-        <div class="head text-center"><b>Data Pasar</b></div>
-        <a class="btn btn-success" href="tambah_data_pasar.html">Tambah</a>
-        <table class="table table-striped">
-            <thead>
+        <div class="head text-center"><b>Informasi Pasar</b></div>
+        <form action="data_pasar.html">
+          <button class="btn btn-danger">Back</button>
+        </form>
+
+        <div class="row">
+          <div class="col-8">
+            <h3 class="h3">Profile</h3>
+            <table class="table table-striped">
+              <tr>
+                <td>No. Registrasi</td>
+              </tr>
+
+              <tr>
+                <td>Nama Pasar</td>
+              </tr>
+
+              <tr>
+                <td>Tanggal Berdiri</td>
+              </tr>
+
+              <tr>
+                <td>Status</td>
+              </tr>
+
+              <tr>
+                <td>Kelas</td>
+              </tr>
+
+              <tr>
+                <td>Lokasi</td>
+              </tr>
+
+              <tr>
+                <td>Luas</td>
+              </tr>
+
+              <tr>
+                <td>Iuran</td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-4">
+            <img src="https://surakarta.go.id/wp-content/uploads/2018/05/pasar-gede.jpg" class="img-thumbnail" alt="" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h3 class="h3">Data Pedagang</h3>
+            <table class="table table-striped">
+              <thead>
                 <tr>
-                    <th>No.</th>
-                    <th>No. Registrasi</th>
-                    <th>Nama Pasar</th>
-                    <th>Status</th>
-                    <th>Kelas</th>
-                    <th>Lokasi</th>
-                    <th>Iuran</th>
-                    <th>Aksi</th>
+                  <th>No.</th>
+                  <th>No. Registrasi</th>
+                  <th>Tanggal Registrasi</th>
+                  <th>Nama</th>
+                  <th>Status</th>
+                  <th>Kios/Los</th>
+                  <th>Luas</th>
+                  <th>Durasi</th>
                 </tr>
-            </thead>
-    
-            <tbody>
+              </thead>
+
+              <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>001</td>
-                    <td>Pasar Gede</td>
-                    <td></td>
-                    <td></td>
-                    <td>jalan disana</td>
-                    <td></td>
-                    <td>
-                        <a class="btn btn-primary btn-sm" href="informasi_pasar.html">Lihat</a>
-                        <a class="btn btn-warning btn-sm" href="edit_data_pasar.html">Edit</a>
-                        <a class="btn btn-danger btn-sm">Hapus</a>
-                    </td>
+                  <td>1</td>
+                  <td>2022001</td>
+                  <td>2022-04-01</td>
+                  <td>Agus</td>
+                  <td>Kontrak</td>
+                  <td>A.1</td>
+                  <td>20 m<sup>2</sup></td>
+                  <td>12 bulan</td>
                 </tr>
-    
+
                 <tr>
-                    <td>2</td>
-                    <td>002</td>
-                    <td>Pasar Klewer</td>
-                    <td></td>
-                    <td></td>
-                    <td>jalan disini</td>
-                    <td></td>
-                    <td>
-                        <a class="btn btn-primary btn-sm" href="informasi_pasar.html">Lihat</a>
-                        <a class="btn btn-warning btn-sm" href="edit_data_pasar.html">Edit</a>
-                        <a class="btn btn-danger btn-sm">Hapus</a>
-                    </td>
+                  <td>2</td>
+                  <td>2022002</td>
+                  <td>2022-04-11</td>
+                  <td>Budi</td>
+                  <td>Kontrak</td>
+                  <td>A.2</td>
+                  <td>20 m<sup>2</sup></td>
+                  <td>6 bulan</td>
                 </tr>
-    
+
                 <tr>
-                    <td>3</td>
-                    <td>003</td>
-                    <td>Pasar Triwindu</td>
-                    <td></td>
-                    <td></td>
-                    <td>jalan disitu</td>
-                    <td></td>
-                    <td>
-                        <a class="btn btn-primary btn-sm" href="informasi_pasar.html">Lihat</a>
-                        <a class="btn btn-warning btn-sm" href="edit_data_pasar.html">Edit</a>
-                        <a class="btn btn-danger btn-sm">Hapus</a>
-                    </td>
+                  <td>3</td>
+                  <td>2022003</td>
+                  <td>2022-04-21</td>
+                  <td>Ciko</td>
+                  <td>Non Kontrak</td>
+                  <td>A.3</td>
+                  <td>20 m<sup>2</sup></td>
+                  <td>24 bulan</td>
                 </tr>
-            </tbody>
-        </table>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
-      </div>
-      
     </main>
 
-    <script src="../src/assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/sidebars.js"></script>
   </body>
 </html>
