@@ -9,9 +9,10 @@
     <title>Admin</title>
     <link rel="icon" href="img/logo.png" />
 
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/" />
+
     <!-- Bootstrap core CSS -->
     <link href="../src/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
 
     <style>
       .bd-placeholder-img {
@@ -27,10 +28,52 @@
           font-size: 3.5rem;
         }
       }
+
+      .container1{
+        width: 400px;
+        position: relative;
+        overflow: hidden;
+        border: 10px solid #ffffff;
+        border-radius: 8px;
+        box-shadow: 10px 25px 30px rgba(0,0,0,0.3);
+      }
+
+      .wrapper{
+        width: 100%;
+        display: flex;
+        animation: slide 16s infinite;
+      }
+
+      @keyframes slide{
+          0%{
+              transform: translateX(0);
+          }
+          25%{
+              transform: translateX(0);
+          }
+          30%{
+              transform: translateX(-100%);
+          }
+          50%{
+              transform: translateX(-100%);
+          }
+          55%{
+              transform: translateX(-200%);
+          }
+          75%{
+              transform: translateX(-200%);
+          }
+          80%{
+              transform: translateX(-300%);
+          }
+          100%{
+              transform: translateX(-300%);
+          }
+      }
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/info_pasar.css" rel="stylesheet" />
     <link href="css/sidebar.css" rel="stylesheet" />
   </head>
   <body>
@@ -127,20 +170,20 @@
 
     <main>
       <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px">
-        <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
           <img src="img/logo.png" width="40" height="40" />
           <span class="fs-4">Aplikasi Pasar</span>
         </a>
         <hr />
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="user_index.html" class="nav-link text-white" aria-current="page">
+            <a href="index.html" class="nav-link text-white" aria-current="page">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#home" /></svg>
               Home
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link text-white">
+            <a href="user_index.html" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2" /></svg>
               Dashboard
             </a>
@@ -200,43 +243,56 @@
       <div class="b-example-divider"></div>
 
       <div class="container">
-        <div class="head"><b>Dashboard</b></div>
-        <ul class="breadcrumbs"></ul>
-        <div class="info-data">
-          <div class="card">
-            <div class="head">
-              <div>
-                <h2>1500</h2>
-                <p>Banyak User</p>
-              </div>
-              <i class="bx bx-trending-up icon"></i>
-            </div>
+        <div class="head text-center"><b>Informasi Kios</b></div>
+        <form action="data_kios.html">
+          <button class="btn btn-danger">Back</button>
+        </form>
+
+        <div class="row">
+          <div class="col-sm-8">
+            <h3 class="h3">Profile</h3>
+            <table class="table table-striped">
+              <tr>
+                <td>No. Registrasi</td>
+              </tr>
+
+              <tr>
+                <td>Nama Pasar</td>
+              </tr>
+
+              <tr>
+                <td>Nama Kios</td>
+              </tr>
+
+              <tr>
+                <td>Tanggal Digunakan</td>
+              </tr>
+
+              <tr>
+                <td>Status</td>
+              </tr>
+
+              <tr>
+                <td>Nama Pengguna</td>
+              </tr>
+
+              <tr>
+                <td>Luas</td>
+              </tr>
+
+              <tr>
+                <td>Iuran</td>
+              </tr>
+            </table>
           </div>
-          <div class="card">
-            <div class="head">
-              <div>
-                <h2>Rp 1.000.000</h2>
-                <p>Jumlah Iuran</p>
+          <div class="col-sm-4">
+            <div class="container1">
+              <div class="wrapper">
+                <img src="https://asset.kompas.com/crops/o-ca6WT_BAnK0abXZ_qASqpDAGg=/0x0:999x666/750x500/data/photo/2021/07/27/60ffc6c6b6fd2.jpg" width="100%">
+                <img src="https://awsimages.detik.net.id/community/media/visual/2019/10/16/bf46f9d3-28d2-4c12-b5dd-ee40a6456beb.jpeg?w=700&q=90" width="100%">
+                <img src="https://statik.tempo.co/data/2019/08/03/id_860824/860824_720.jpg" width="100%">
+                <img src="https://www.balipost.com/wp-content/uploads/2020/04/balipostcom_perumda-pasar-sewakadarma-berikan-keringanan-biaya-sewa-kios_01-696x464.jpg" width="100%">
               </div>
-              <i class="bx bx-trending-down icon down"></i>
-            </div>
-          </div>
-          <div class="card">
-            <div class="head">
-              <div>
-                <h2>465</h2>
-                <p>Jumlah Pedagang</p>
-              </div>
-              <i class="bx bx-trending-up icon"></i>
-            </div>
-          </div>
-          <div class="card">
-            <div class="head">
-              <div>
-                <h2>25</h2>
-                <p>Banyak Pasar</p>
-              </div>
-              <i class="bx bx-trending-up icon"></i>
             </div>
           </div>
         </div>

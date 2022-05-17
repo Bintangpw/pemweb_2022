@@ -9,9 +9,10 @@
     <title>Admin</title>
     <link rel="icon" href="img/logo.png" />
 
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/" />
+
     <!-- Bootstrap core CSS -->
     <link href="../src/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
 
     <style>
       .bd-placeholder-img {
@@ -30,7 +31,7 @@
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/report_pedagang.css" rel="stylesheet" />
     <link href="css/sidebar.css" rel="stylesheet" />
   </head>
   <body>
@@ -140,7 +141,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link text-white">
+            <a href="index.html" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2" /></svg>
               Dashboard
             </a>
@@ -200,47 +201,43 @@
       <div class="b-example-divider"></div>
 
       <div class="container">
-        <div class="head"><b>Dashboard</b></div>
-        <ul class="breadcrumbs"></ul>
-        <div class="info-data">
-          <div class="card">
-            <div class="head">
-              <div>
-                <h2>1500</h2>
-                <p>Banyak User</p>
-              </div>
-              <i class="bx bx-trending-up icon"></i>
-            </div>
-          </div>
-          <div class="card">
-            <div class="head">
-              <div>
-                <h2>Rp 1.000.000</h2>
-                <p>Jumlah Iuran</p>
-              </div>
-              <i class="bx bx-trending-down icon down"></i>
-            </div>
-          </div>
-          <div class="card">
-            <div class="head">
-              <div>
-                <h2>465</h2>
-                <p>Jumlah Pedagang</p>
-              </div>
-              <i class="bx bx-trending-up icon"></i>
-            </div>
-          </div>
-          <div class="card">
-            <div class="head">
-              <div>
-                <h2>25</h2>
-                <p>Banyak Pasar</p>
-              </div>
-              <i class="bx bx-trending-up icon"></i>
-            </div>
-          </div>
-        </div>
+        <div class="head text-center"><b>Report Data Kios</b></div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>No. Registrasi</th>
+                    <th>Nama Pasar</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>001</td>
+                    <td>Pasar Gede</td>
+                    <td><button class="btn btn-success">Print</button></td>
+                </tr>
+    
+                <tr>
+                    <td>2</td>
+                    <td>002</td>
+                    <td>Pasar Klewer</td>
+                    <td><button class="btn btn-success">Print</button></td>
+                </tr>
+    
+                <tr>
+                    <td>3</td>
+                    <td>003</td>
+                    <td>Pasar Triwindu</td>
+                    <td><button class="btn btn-success">Print</button></td>
+                </tr>
+            </tbody>
+        </table>
       </div>
+      </div>
+      
     </main>
 
     <script src="../src/assets/dist/js/bootstrap.bundle.min.js"></script>

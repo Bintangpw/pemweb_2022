@@ -135,7 +135,7 @@
         <hr />
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="user/user_index.html" class="nav-link text-white" aria-current="page">
+            <a href="user_index.html" class="nav-link text-white" aria-current="page">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#home" /></svg>
               Home
             </a>
@@ -147,9 +147,8 @@
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link text-white">
+            <a href="kon_app.html" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid" /></svg>
-
               Konfigurasi Aplikasi
             </a>
           </li>
@@ -163,6 +162,7 @@
             <div class="collapse" id="dashboard-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li><a href="data_pasar.html" class="link-dark rounded text-white">Data Pasar</a></li>
+                <li><a href="data_kios.html" class="link-dark rounded text-white">Data Kios</a></li>
                 <li><a href="data_pedagang.html" class="link-dark rounded text-white">Data Pedagang</a></li>
               </ul>
             </div>
@@ -177,6 +177,7 @@
             <div class="collapse" id="orders-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                 <li><a href="report_data_pasar.html" class="link-dark rounded text-white">Data Pasar</a></li>
+                <li><a href="report_data_kios.html" class="link-dark rounded text-white">Data Kios</a></li>
                 <li><a href="report_data_pedagang.html" class="link-dark rounded text-white">Data Pedagang</a></li>
               </ul>
             </div>
@@ -201,7 +202,9 @@
 
       <div class="container">
         <div class="head text-center"><b>Informasi Pedagang</b></div>
-        <button class="btn btn-danger">Back</button>
+        <form action="data_pedagang.html">
+          <button class="btn btn-danger">Back</button>
+        </form>
 
         <div class="row">
           <div class="col-8">

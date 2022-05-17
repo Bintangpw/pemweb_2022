@@ -28,6 +28,48 @@
           font-size: 3.5rem;
         }
       }
+      
+      .container1{
+        width: 400px;
+        position: relative;
+        overflow: hidden;
+        border: 10px solid #ffffff;
+        border-radius: 8px;
+        box-shadow: 10px 25px 30px rgba(0,0,0,0.3);
+      }
+
+      .wrapper{
+        width: 100%;
+        display: flex;
+        animation: slide 16s infinite;
+      }
+
+      @keyframes slide{
+          0%{
+              transform: translateX(0);
+          }
+          25%{
+              transform: translateX(0);
+          }
+          30%{
+              transform: translateX(-100%);
+          }
+          50%{
+              transform: translateX(-100%);
+          }
+          55%{
+              transform: translateX(-200%);
+          }
+          75%{
+              transform: translateX(-200%);
+          }
+          80%{
+              transform: translateX(-300%);
+          }
+          100%{
+              transform: translateX(-300%);
+          }
+      }
     </style>
 
     <!-- Custom styles for this template -->
@@ -135,21 +177,20 @@
         <hr />
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="user/user_index.html" class="nav-link text-white" aria-current="page">
+            <a href="index.html" class="nav-link text-white" aria-current="page">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#home" /></svg>
               Home
             </a>
           </li>
           <li>
-            <a href="index.html" class="nav-link text-white">
+            <a href="user_index.html" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2" /></svg>
               Dashboard
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link text-white">
+            <a href="kon_app.html" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid" /></svg>
-
               Konfigurasi Aplikasi
             </a>
           </li>
@@ -162,8 +203,9 @@
             </button>
             <div class="collapse" id="dashboard-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="#" class="link-dark rounded text-white">Data Pasar</a></li>
-                <li><a href="#" class="link-dark rounded text-white">Data Pedagang</a></li>
+                <li><a href="data_pasar.html" class="link-dark rounded text-white">Data Pasar</a></li>
+                <li><a href="data_kios.html" class="link-dark rounded text-white">Data Kios</a></li>
+                <li><a href="data_pedagang.html" class="link-dark rounded text-white">Data Pedagang</a></li>
               </ul>
             </div>
           </li>
@@ -176,8 +218,9 @@
             </button>
             <div class="collapse" id="orders-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li><a href="#" class="link-dark rounded text-white">Data Pasar</a></li>
-                <li><a href="#" class="link-dark rounded text-white">Data Pedagang</a></li>
+                <li><a href="report_data_pasar.html" class="link-dark rounded text-white">Data Pasar</a></li>
+                <li><a href="report_data_kios.html" class="link-dark rounded text-white">Data Kios</a></li>
+                <li><a href="report_data_pedagang.html" class="link-dark rounded text-white">Data Pedagang</a></li>
               </ul>
             </div>
           </li>
@@ -201,10 +244,12 @@
 
       <div class="container">
         <div class="head text-center"><b>Informasi Pasar</b></div>
-        <button class="btn btn-danger">Back</button>
+        <form action="data_pasar.html">
+          <button class="btn btn-danger">Back</button>
+        </form>
 
         <div class="row">
-          <div class="col-8">
+          <div class="col-sm-8">
             <h3 class="h3">Profile</h3>
             <table class="table table-striped">
               <tr>
@@ -240,8 +285,15 @@
               </tr>
             </table>
           </div>
-          <div class="col-4">
-            <img src="https://surakarta.go.id/wp-content/uploads/2018/05/pasar-gede.jpg" class="img-thumbnail" alt="" />
+          <div class="col-sm-4">
+            <div class="container1">
+              <div class="wrapper">
+                <img src="https://surakarta.go.id/wp-content/uploads/2018/05/pasar-gede.jpg" width="100%">
+                <img src="http://solotourismpromotionboard.org/wp-content/uploads/2020/12/gedesash.jpg" width="100%">
+                <img src="http://mixmedia.co.id/mymagz/wp-content/uploads/sites/8/2017/01/PASAR-GEDE-SOLO-1.jpg" width="100%">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/0c/fc/49/6e/p-20160916-150125-largejpg.jpg" width="100%">
+              </div>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -303,5 +355,6 @@
 
     <script src="../src/assets/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/sidebars.js"></script>
+    
   </body>
 </html>

@@ -9,9 +9,10 @@
     <title>Admin</title>
     <link rel="icon" href="img/logo.png" />
 
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/" />
+
     <!-- Bootstrap core CSS -->
     <link href="../src/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
 
     <style>
       .bd-placeholder-img {
@@ -30,7 +31,7 @@
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/edit_pasar.css" rel="stylesheet" />
     <link href="css/sidebar.css" rel="stylesheet" />
   </head>
   <body>
@@ -127,7 +128,7 @@
 
     <main>
       <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px">
-        <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
           <img src="img/logo.png" width="40" height="40" />
           <span class="fs-4">Aplikasi Pasar</span>
         </a>
@@ -140,7 +141,7 @@
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link text-white">
+            <a href="index.html" class="nav-link text-white">
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2" /></svg>
               Dashboard
             </a>
@@ -200,43 +201,76 @@
       <div class="b-example-divider"></div>
 
       <div class="container">
-        <div class="head"><b>Dashboard</b></div>
-        <ul class="breadcrumbs"></ul>
-        <div class="info-data">
-          <div class="card">
-            <div class="head">
-              <div>
-                <h2>1500</h2>
-                <p>Banyak User</p>
+        <div class="head text-center"><b>Edit Data Kios</b></div>
+
+        <div class="row">
+          <div class="col-10">
+            <div class="mb-3 row">
+              <label for="nomorRegistrasi" class="col-sm-2 col-form-label">Nomor Registrasi</label>
+              <div class="col-sm-8">
+                <input type="text" name="" id="nomorRegistrasi" class="form-control" autocomplete="off" />
               </div>
-              <i class="bx bx-trending-up icon"></i>
             </div>
-          </div>
-          <div class="card">
-            <div class="head">
-              <div>
-                <h2>Rp 1.000.000</h2>
-                <p>Jumlah Iuran</p>
+
+            <div class="mb-3 row">
+              <label for="namaPasar" class="col-sm-2 col-form-label">Nama Pasar</label>
+              <div class="col-sm-8">
+                <input type="text" name="" id="namaPasar" class="form-control" autocomplete="off" />
               </div>
-              <i class="bx bx-trending-down icon down"></i>
             </div>
-          </div>
-          <div class="card">
-            <div class="head">
-              <div>
-                <h2>465</h2>
-                <p>Jumlah Pedagang</p>
+
+            <div class="mb-3 row">
+              <label for="namaKios" class="col-sm-2 col-form-label">Nama Kios</label>
+              <div class="col-sm-8">
+                <input type="text" name="" id="namaKios" class="form-control" autocomplete="off" />
               </div>
-              <i class="bx bx-trending-up icon"></i>
             </div>
-          </div>
-          <div class="card">
-            <div class="head">
-              <div>
-                <h2>25</h2>
-                <p>Banyak Pasar</p>
+
+            <div class="mb-3 row">
+              <label for="tanggalDigunakan" class="col-sm-2 col-form-label">Tanggal Digunakan</label>
+              <div class="col-sm-8">
+                <input type="date" name="" id="tanggalDigunakan" class="form-control" autocomplete="off" />
               </div>
-              <i class="bx bx-trending-up icon"></i>
+            </div>
+
+            <div class="mb-3 row">
+              <label for="status" class="col-sm-2 col-form-label">Status</label>
+              <div class="col-sm-8">
+                <input type="text" name="" id="status" class="form-control" autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="mb-3 row">
+              <label for="namaPengguna" class="col-sm-2 col-form-label">Nama Pengguna</label>
+              <div class="col-sm-8">
+                <input type="text" name="" id="namaPengguna" class="form-control" autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="mb-3 row">
+              <label for="luas" class="col-sm-2 col-form-label">Luas</label>
+              <div class="col-sm-8">
+                <input type="text" name="" id="luas" class="form-control" autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="mb-3 row">
+              <label for="iuran" class="col-sm-2 col-form-label">Iuran/bulan</label>
+              <div class="col-sm-8">
+                <input type="text" name="" id="iuran" class="form-control" autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="mb-3 row">
+              <label for="foto" class="col-sm-2 col-form-label">Foto</label>
+              <div class="col-sm-8">
+                <input type="file" name="" id="foto" class="form-control" autocomplete="off" />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <button class="btn btn-danger">Cancel</button>
+              <button class="btn btn-success">Save</button>
             </div>
           </div>
         </div>
