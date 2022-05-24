@@ -1,40 +1,29 @@
 @extends('layouts.guest')
 
 @section('content')
-    <div class="card-body login-card-body">
-        <p class="login-box-msg">{{ __('Reset Password') }}</p>
+    <div class="col-md-6">
+        <div class="card mb-4 mx-4">
+            <div class="card-body p-4">
+                <h1>{{ __('Reset Password') }}</h1>
+                <form action="{{ route('password.email') }}" method="POST">
+                    @csrf
 
-        @if (session('status'))
-            <div class="alert alert-success" role="alert">
-                {{ session('status') }}
-            </div>
-        @endif
-
-        <form method="POST" action="{{ route('password.email') }}">
-            @csrf
-
-            <div class="input-group mb-3">
-                <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
-                       placeholder="{{ __('Email') }}" required autofocus>
-                <div class="input-group-append">
-                    <div class="input-group-text">
-                        <span class="fas fa-envelope"></span>
+                    <div class="input-group mb-3"><span class="input-group-text">
+                    <svg class="icon">
+                      <use xlink:href="{{ asset('icons/coreui.svg#cil-envelope-open') }}"></use>
+                    </svg></span>
+                        <input class="form-control @error('email') is-invalid @enderror" type="email"
+                               id="email" name="email" placeholder="{{ __('Email') }}">
+                        @error('email')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
-                </div>
-                @error('email')
-                    <span class="error invalid-feedback">
-                        {{ $message }}
-                    </span>
-                @enderror
+                    <button class="btn btn-block btn-success"
+                            type="submit">{{ __('Send Password Reset Link') }}</button>
+                </form>
             </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <button type="submit"
-                            class="btn btn-primary btn-block">{{ __('Send Password Reset Link') }}</button>
-                </div>
-                <!-- /.col -->
-            </div>
-        </form>
+        </div>
     </div>
 @endsection

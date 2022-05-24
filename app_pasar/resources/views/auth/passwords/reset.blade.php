@@ -1,66 +1,60 @@
 @extends('layouts.guest')
 
 @section('content')
-    <div class="card-body login-card-body">
-        <p class="login-box-msg">{{ __('Reset Password') }}</p>
+    <div class="col-md-6">
+        <div class="card mb-4 mx-4">
+            <div class="card-body p-4">
+                <h1>{{ __('Reset Password') }}</h1>
 
-        <form method="POST" action="{{ route('password.update') }}">
-            @csrf
+                <form action="{{ route('password.update') }}" method="POST">
+                    @csrf
 
-            <input type="hidden" name="token" value="{{ $token }}">
-
-            <div class="input-group mb-3">
-                <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
-                       placeholder="Email" required autofocus>
-                <div class="input-group-append">
-                    <div class="input-group-text">
-                        <span class="fas fa-envelope"></span>
+                    <div class="input-group mb-3"><span class="input-group-text">
+                    <svg class="icon">
+                      <use xlink:href="{{ asset('icons/coreui.svg#cil-envelope-open') }}"></use>
+                    </svg></span>
+                        <input class="form-control @error('email') is-invalid @enderror" type="text"
+                               placeholder="{{ __('Email') }}">
+                        @error('email')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
-                </div>
-                @error('email')
-                <span class="error invalid-feedback">
-                                {{ $message }}
-                            </span>
-                @enderror
-            </div>
 
-            <div class="input-group mb-3">
-                <input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
-                       placeholder="{{ __('Password') }}" required>
-                <div class="input-group-append">
-                    <div class="input-group-text">
-                        <span class="fas fa-lock"></span>
+                    <div class="input-group mb-4"><span class="input-group-text">
+                      <svg class="icon">
+                        <use xlink:href="{{ asset('icons/coreui.svg#cil-lock-locked') }}"></use>
+                      </svg></span>
+                        <input class="form-control @error('password') is-invalid @enderror" type="password"
+                               id="password" name="password"
+                               placeholder="{{ __('Password') }}">
+                        @error('password')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
-                </div>
-                @error('password')
-                <span class="error invalid-feedback">
-                    {{ $message }}
-                </span>
-                @enderror
-            </div>
 
-            <div class="input-group mb-3">
-                <input type="password" name="password_confirmation"
-                       class="form-control @error('password_confirmation') is-invalid @enderror"
-                       placeholder="{{ __('Confirm Password') }}" required>
-                <div class="input-group-append">
-                    <div class="input-group-text">
-                        <span class="fas fa-lock"></span>
+                    <div class="input-group mb-4"><span class="input-group-text">
+                      <svg class="icon">
+                        <use xlink:href="{{ asset('icons/coreui.svg#cil-lock-locked') }}"></use>
+                      </svg></span>
+                        <input class="form-control @error('password_confirmation') is-invalid @enderror" type="password"
+                               id="password_confirmation" name="password_confirmation"
+                               placeholder="{{ __('Confirm Password') }}">
+                        @error('password_confirmation')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
-                </div>
-                @error('password_confirmation')
-                <span class="error invalid-feedback">
-                    {{ $message }}
-                </span>
-                @enderror
-            </div>
 
-            <div class="row">
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary btn-block">{{ __('Reset Password') }}</button>
-                </div>
-                <!-- /.col -->
+                    <button class="btn btn-block btn-success"
+                            type="submit">{{ __('Reset Password') }}</button>
+                </form>
+
             </div>
-        </form>
+        </div>
     </div>
 @endsection

@@ -1,38 +1,40 @@
 @extends('layouts.guest')
 
 @section('content')
-    <div class="card-body login-card-body">
-        <p class="login-box-msg">{{ __('Please confirm your password before continuing.') }}</p>
+    <div class="col-md-6">
+        <div class="card mb-4 mx-4">
+            <div class="card-body p-4">
+                <h1>{{ __('Please confirm your password before continuing.') }}</h1>
 
-        <form method="POST" action="{{ route('password.confirm') }}">
-            @csrf
+                <form method="POST" action="{{ route('password.confirm') }}">
+                    @csrf
 
-            <div class="input-group mb-3">
-                <input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
-                       placeholder="{{ __('Password') }}" required autocomplete="current-password">
-                <div class="input-group-append">
-                    <div class="input-group-text">
-                        <span class="fas fa-lock"></span>
+                    <div class="input-group mb-3"><span class="input-group-text">
+                    <svg class="icon">
+                      <use xlink:href="{{ asset('icons/coreui.svg#cil-lock-locked') }}"></use>
+                    </svg></span>
+                        <input class="form-control @error('password') is-invalid @enderror" type="password"
+                               id="password" name="password" placeholder="{{ __('Password') }}">
+                        @error('password')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     </div>
-                </div>
-                @error('password')
-                <span class="error invalid-feedback">
-                    {{ $message }}
-                </span>
-                @enderror
-            </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn-primary px-4" type="submit">{{ __('Confirm Password') }}</button>
+                        </div>
+                        @if (Route::has('password.request'))
+                            <div class="col-6 text-end">
+                                <a href="{{ route('password.request') }}" class="btn btn-link px-0"
+                                   type="button">{{ __('Forgot Your Password?') }}</a>
+                            </div>
+                        @endif
+                    </div>
+                </form>
 
-            <div class="row">
-                <div class="col-12">
-                    <button type="submit"
-                            class="btn btn-primary btn-block">{{ __('Confirm Password') }}</button>
-                </div>
             </div>
-        </form>
-        @if (Route::has('password.request'))
-            <p class="mb-1">
-                <a href="{{ route('password.request') }}">{{ __('Forgot Your Password?') }}</a>
-            </p>
-        @endif
+        </div>
     </div>
 @endsection

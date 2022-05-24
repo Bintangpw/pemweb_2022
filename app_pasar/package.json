@@ -10,10 +10,10 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "@coreui/coreui": "^4.0.2",
         "@popperjs/core": "^2.10.2",
         "axios": "^0.25",
         "bootstrap": "^5.1.3",
-        "jquery": "^3.6.0",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
