@@ -30,9 +30,8 @@
                 </svg>
             </button>
             <a class="header-brand d-md-none" href="#">
-                <svg width="118" height="46" alt="CoreUI Logo">
-                    <use xlink:href="{{ asset('icons/brand.svg#full') }}"></use>
-                </svg>
+                <img class="sidebar-brand-full" width="40" height="40" alt="CoreUI Logo"
+                src="icons/logo.png">
             </a>
             <ul class="header-nav d-none d-md-flex">
                 <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Dashboard</a></li>
