@@ -2,7 +2,7 @@
     <li class="nav-item">
         <a class="nav-link" href="{{ route('home') }}">
             <svg class="nav-icon">
-                <use xlink:href="{{ asset('icons/coreui.svg#cil-speedometer') }}"></use>
+                <use xlink:href="{{ asset('icons/coreui.svg#cil-home') }}"></use>
             </svg>
             {{ __('Dashboard') }}
         </a>
@@ -20,7 +20,7 @@
     <li class="nav-item">
         <a class="nav-link" href="{{ route('about') }}">
             <svg class="nav-icon">
-                <use xlink:href="{{ asset('icons/coreui.svg#cil-home') }}"></use>
+                <use xlink:href="{{ asset('icons/coreui.svg#cil-info') }}"></use>
             </svg>
             {{ __('About us') }}
         </a>
