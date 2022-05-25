@@ -1,31 +1,37 @@
 @extends('layouts.guest')
 
 @section('content')
-    <div class="col-md-6">
-        <div class="card mb-4 mx-4">
-            <div class="card-body p-4">
-                <h1>{{ __('Please confirm your password before continuing.') }}</h1>
-
-                @if (session('resent'))
-                    <div class="alert alert-success" role="alert">
-                        {{ __('A fresh verification link has been sent to your email address.') }}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="bg-white shadow border-0 rounded p-4 p-lg-5 w-100 fmxw-500">
+                    <div class="fs-6 lh-sm text-light">
+                        {{ __('Thanks for signing up! Before getting started, ') }}
                     </div>
-                @endif
+                    <div class="mb-2 fs-6 lh-sm text-light">
+                        {{ __('could you verify your email address by clicking on the link we just emailed to you?') }}
+                    </div>
+                    <div class="mb-4 fs-6 lh-sm text-light">
+                        {{ __('If you didn\'t receive the email, we will gladly send you another.') }}
+                    </div>
 
-                <p class="text-medium-emphasis">{{ __('Before proceeding, please check your email for a verification link.') }}</p>
-                <p class="text-medium-emphasis">{{ __('If you did not receive the email') }},</p>
-
-                <form method="POST" action="{{ route('verification.resend') }}">
-                    @csrf
-
-                    <div class="row">
-                        <div class="col-12">
-                            <button class="btn btn-primary px-4"
-                                    type="submit">{{ __('click here to request another') }}</button>
+                    @if (session('resent'))
+                        <div class="mb-4 fw-bold fs-6 lh-sm text-success">
+                            {{ __('A new verification link has been sent to the email address you provided during registration.') }}
                         </div>
-                    </div>
-                </form>
+                    @endif
 
+                    <div class="mt-4 d-flex align-items-center justify-content-center">
+                        <form method="POST" action="{{ route('verification.resend') }}">
+                            @csrf
+
+                            <div class="d-grid">
+                                <button type="submit"
+                                    class="btn btn-gray-800">{{ __('Resend Verification Email') }}</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

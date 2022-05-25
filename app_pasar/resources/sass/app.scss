@@ -1,13 +1,16 @@
-// If you want to override variables do it here
-@import "variables";
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/solid";
 
-$enable-ltr: true; /* stylelint-disable-line scss/dollar-variable-default */
-$enable-rtl: true; /* stylelint-disable-line scss/dollar-variable-default */
+@import "volt";
 
-// Import styles
-@import "@coreui/coreui/scss/coreui";
+.invalid-feedback {
+    display: block;
+}
 
-@import "layout";
+.main {
+    min-height: calc(100vh - 180px);
+}
 
-// If you want to add custom CSS you can put it here.
-@import "custom";
+.table > :not(:first-child) {
+    border-top: 0;
+}
