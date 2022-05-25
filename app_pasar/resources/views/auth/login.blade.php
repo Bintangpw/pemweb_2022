@@ -39,8 +39,8 @@
                             </div>
                             @if (Route::has('password.request'))
                                 <div class="col-6 text-end">
-                                    <a href="{{ route('password.request') }}" class="btn btn-link px-0"
-                                       type="button">{{ __('Forgot Your Password?') }}</a>
+                                    <a href="{{ route('password.request') }}" class="btn btn-warning px-2"
+                                       type="button">{{ __('Lupa Password') }}</a>
                                 </div>
                             @endif
                         </div>
@@ -52,7 +52,7 @@
                     <div>
                         <h2>{{ __('Sign up') }}</h2>
                         <a href="{{ route('register') }}"
-                           class="btn btn-lg btn-outline-light mt-3">{{ __('Register') }}</a>
+                           class="btn btn-lg btn-info mt-3">{{ __('Daftar') }}</a>
                     </div>
                 </div>
             </div>

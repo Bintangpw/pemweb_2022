@@ -14326,3 +14326,7 @@ html:not([dir=rtl]) .wrapper {
     transition: none;
   }
 }
+
+.img_login {
+background-image: url(../img/pasar.jpg);
+}
