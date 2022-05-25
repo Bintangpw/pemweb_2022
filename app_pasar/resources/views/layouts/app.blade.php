@@ -71,7 +71,9 @@
             @yield('content')
         </div>
     </div>
-    
+    <footer class="footer">
+        
+    </footer>
 </div>
 <script src="{{ asset('js/coreui.bundle.min.js') }}"></script>
 </body>
