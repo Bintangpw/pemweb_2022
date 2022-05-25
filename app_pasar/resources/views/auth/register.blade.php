@@ -6,14 +6,14 @@
             <div class="col-12 d-flex align-items-center justify-content-center">
                 <div class="bg-white shadow border-0 rounded border-light p-4 p-lg-5 w-100 fmxw-500">
                     <div class="text-center text-md-center mb-4 mt-md-0">
-                        <h1 class="mt-n3 mb-0 h3">{{ __('Create Account') }}</h1>
+                        <h1 class="mt-n3 mb-0 h3">{{ __('Buat Akun') }}</h1>
                     </div>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         
                         <!-- Form -->
                         <div class="form-group mt-4 mb-4">
-                            <label for="name">{{ __('Your Name') }}</label>
+                            <label for="name">{{ __('Nama') }}</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon1">
                                     <i class="fas fa-user-alt fa-fw"></i>
@@ -28,7 +28,7 @@
 
                         <!-- Form -->
                         <div class="form-group mt-4 mb-4">
-                            <label for="email">{{ __('Your Email') }}</label>
+                            <label for="email">{{ __('Email') }}</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon1">
                                     <svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20"
@@ -47,7 +47,7 @@
                         <!-- End of Form -->
                         <!-- Form -->
                         <div class="form-group mb-4">
-                            <label for="password">{{ __('Your Password') }}</label>
+                            <label for="password">{{ __('Password') }}</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon2">
                                     <svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20"
@@ -67,7 +67,7 @@
                         <!-- End of Form -->
                         <!-- Form -->
                         <div class="form-group mb-4">
-                            <label for="password_confirmation">{{ __('Confirm Password') }}</label>
+                            <label for="password_confirmation">{{ __('Ketik Ulang Password') }}</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon3">
                                     <svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20"
@@ -78,20 +78,20 @@
                                         </path>
                                     </svg>
                                 </span>
-                                <input name="password_confirmation" type="password" placeholder="{{ __('Confirm Password') }}"
+                                <input name="password_confirmation" type="password" placeholder="{{ __('Ketik Ulang Password') }}"
                                     class="form-control" id="password_confirmation" required>
                             </div>
                         </div>
                         <!-- End of Form -->
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-gray-800">{{ __('Register') }}</button>
+                            <button type="submit" class="btn btn-gray-800">{{ __('Daftar') }}</button>
                         </div>
                     </form>
 
                     <div class="d-flex justify-content-center align-items-center mt-4">
                         <span class="fw-normal">
-                            {{ __('Already have an account?') }}
-                            <a href="{{ route('login') }}" class="fw-bold">{{ __('Login here') }}</a>
+                            {{ __('Sudah punya akun?') }}
+                            <a href="{{ route('login') }}" class="fw-bold">{{ __('Login disni') }}</a>
                         </span>
                     </div>
                 </div>

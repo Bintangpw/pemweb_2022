@@ -5,14 +5,14 @@
             <div class="col-12 d-flex align-items-center justify-content-center">
                 <div class="bg-white shadow-soft border rounded border-light p-4 p-lg-5 w-100 fmxw-500">
                     <div class="text-center text-md-center mb-4 mt-md-0">
-                        <h1 class="mb-3 h3">{{ __('Welcome back') }}</h1>
+                        <h1 class="mb-3 h3">{{ __('Login') }}</h1>
                     </div>
 
                     <form class="mt-4" action="{{ route('login') }}" method="POST">
                         @csrf
                         <!-- Form -->
                         <div class="form-group mb-4">
-                            <label for="email">{{ __('Your Email') }}</label>
+                            <label for="email">{{ __('Email') }}</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon1">
                                     <svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20"
@@ -34,7 +34,7 @@
                         <div class="form-group">
                             <!-- Form -->
                             <div class="form-group mb-4">
-                                <label for="password">{{ __('Your Password') }}</label>
+                                <label for="password">{{ __('Password') }}</label>
                                 <div class="input-group">
                                     <span class="input-group-text" id="basic-addon2">
                                         <svg class="icon icon-xs text-gray-600" fill="currentColor" viewBox="0 0 20 20"
@@ -62,20 +62,20 @@
                                 </div>
                                 <div>
                                     <a href="{{ route('password.request') }}" class="small text-right">
-                                        {{ __('Lost password?') }}
+                                        {{ __('lupa password?') }}
                                     </a>
                                 </div>
                             </div>
                         </div>
 
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-gray-800">{{ __('Sign in') }}</button>
+                            <button type="submit" class="btn btn-gray-800">{{ __('Masuk') }}</button>
                         </div>
                     </form>
                     <div class="d-flex justify-content-center align-items-center mt-4">
                         <span class="fw-normal">
-                            {{ __('Not registered?') }}
-                            <a href="{{ route('register') }}" class="fw-bold">{{ __('Create account') }}</a>
+                            {{ __('Belum Punya akun?') }}
+                            <a href="{{ route('register') }}" class="fw-bold">{{ __('Daftar') }}</a>
                         </span>
                     </div>
                 </div>
