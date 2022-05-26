@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PasarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +29,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
+    
+    Route::get('pasar', [\App\Http\Controllers\PasarController::class, 'index'])->name('pasar');
+    Route::get('tenant', [\App\Http\Controllers\TenantController::class, 'index'])->name('tenant');
+    Route::get('pemilik', [\App\Http\Controllers\PemilikController::class, 'index'])->name('pemilik');
 });

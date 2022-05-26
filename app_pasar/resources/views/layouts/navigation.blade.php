@@ -46,8 +46,8 @@
     </li>
 
     <li class="nav-item">
-        <span class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
-            data-bs-target="#submenu-app">
+        <span class="nav-link d-flex justify-content-between align-items-center collapsed" data-bs-toggle="collapse"
+            data-bs-target="#submenu-table">
             <span>
                 <span class="sidebar-icon me-3">
                     <i class="fas fa-table fa-fw"></i>
@@ -63,26 +63,26 @@
                 </svg>
             </span>
         </span>
-        <div class="multi-level collapse" role="list" id="submenu-app" aria-expanded="false">
+        <div class="multi-level collapse" role="list" id="submenu-table" aria-expanded="false">
             <ul class="flex-column nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <span class="sidebar-icon">
+                    <a href="{{ route('pasar') }}" class="nav-link">
+                        <span class="sidebar-icon me-3">
                             <i class="fas"></i>
                         </span>
-                        <span class="sidebar-text">Data Pasar</span>
+                        <span class="sidebar-text">{{ __('Data Pasar') }}</span>
                     </a>
-                    <a class="nav-link" href="#">
-                        <span class="sidebar-icon">
+                    <a href="{{ route('tenant') }}" class="nav-link">
+                        <span class="sidebar-icon me-3">
                             <i class="fas"></i>
                         </span>
-                        <span class="sidebar-text">Data Kios</span>
+                        <span class="sidebar-text">{{ __('Data Kios') }}</span>
                     </a>
-                    <a class="nav-link" href="#">
-                        <span class="sidebar-icon">
+                    <a href="{{ route('pemilik') }}" class="nav-link">
+                        <span class="sidebar-icon me-3">
                             <i class="fas"></i>
                         </span>
-                        <span class="sidebar-text">Data Pedagang</span>
+                        <span class="sidebar-text">{{ __('Data Pedagang') }}</span>
                     </a>
                 </li>
             </ul>
@@ -90,8 +90,8 @@
     </li>
 
     <li class="nav-item">
-        <span class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
-            data-bs-target="#submenu-app">
+        <span class="nav-link d-flex justify-content-between align-items-center collapsed" data-bs-toggle="collapse"
+            data-bs-target="#submenu-report">
             <span>
                 <span class="sidebar-icon me-3">
                     <i class="fas fa-book fa-fw"></i>
@@ -107,7 +107,7 @@
                 </svg>
             </span>
         </span>
-        <div class="multi-level collapse" role="list" id="submenu-app" aria-expanded="false">
+        <div class="multi-level collapse" role="list" id="submenu-report" aria-expanded="false">
             <ul class="flex-column nav">
                 <li class="nav-item">
                     <a class="nav-link" href="#">
