@@ -9,4 +9,6 @@ class Pasar extends Model
 {
     use HasFactory;
     protected $table = 'pasar';
+    protected $guarded = [];
+    protected $dates = ['crated at'];
 }

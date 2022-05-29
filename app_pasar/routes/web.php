@@ -33,4 +33,7 @@ Route::middleware('auth')->group(function () {
     Route::get('pasar', [\App\Http\Controllers\PasarController::class, 'index'])->name('pasar');
     Route::get('tenant', [\App\Http\Controllers\TenantController::class, 'index'])->name('tenant');
     Route::get('pemilik', [\App\Http\Controllers\PemilikController::class, 'index'])->name('pemilik');
+    Route::get('tambahPasar', [\App\Http\Controllers\PasarController::class, 'tambahPasar'])->name('tambahPasar');
+    Route::post('insertPasar', [\App\Http\Controllers\PasarController::class, 'insertPasar'])->name('insertPasar');
+    Route::get('delete/{id}', [\App\Http\Controllers\PasarController::class, 'delete'])->name('delete');
 });

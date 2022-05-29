@@ -11,4 +11,23 @@ class PasarController extends Controller
         $pasar= Pasar::paginate();
         return view('pasar', compact('pasar'));
     }
+
+    public function tambahPasar()
+    {
+        return view('tambahPasar');
+    }
+
+    public function insertPasar(Request $request)
+    {
+        //dd($request->all());
+        Pasar::create($request->all());
+        return redirect()->route('pasar')->with('success', 'Data Berhasil Disimpan');
+    }
+
+    public function delete($id)
+    {
+        $pasar = Pasar::find($id);
+        $pasar->delete();
+        return redirect()->route('pasar')->with('success', 'Data Berhasil Dihapus');
+    }
 }
