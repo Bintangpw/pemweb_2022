@@ -17,7 +17,7 @@
             <table class="table table-hover text-center">
                 <thead>
                     <tr>
-                        <th class="border-gray-200">{{ __('id') }}</th>
+                        <th class="border-gray-200">{{ __('id_pasar') }}</th>
                         <th class="border-gray-200">{{ __('Nama Pasar') }}</th>
                         <th class="border-gray-200">{{ __('Alamat Pasar') }}</th>
                         <th class="border-gray-200">{{ __('Kode Pasar') }}</th>
@@ -42,8 +42,8 @@
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <button type="button" class="btn btn-info btn-sm">Lihat</button>
-                                    <button type="button" class="btn btn-warning btn-sm">Edit</button>
-                                    <a href="/delete/{{ $pasar->id }}" class="btn btn-danger btn-sm">Hapus</a>
+                                    <a href="/showPasar/{{ $pasar->id }}" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="/deletePasar/{{ $pasar->id }}" class="btn btn-danger btn-sm">Hapus</a>
                                 </div>
                             </td>
                         </tr>

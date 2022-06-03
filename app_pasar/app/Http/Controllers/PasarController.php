@@ -24,6 +24,19 @@ class PasarController extends Controller
         return redirect()->route('pasar')->with('success', 'Data Berhasil Disimpan');
     }
 
+    public function editPasar(Request $request, $id)
+    {
+        $pasar = Pasar::find($id);
+        $pasar->update($request->all());
+        return redirect()->route('pasar')->with('success', 'Data Berhasil Diubah');
+    }
+
+    public function showPasar($id)
+    {
+        $pasar = Pasar::find($id);
+        return view('editPasar', compact('pasar'));
+    }
+
     public function delete($id)
     {
         $pasar = Pasar::find($id);

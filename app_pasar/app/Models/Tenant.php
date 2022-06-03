@@ -9,4 +9,6 @@ class Tenant extends Model
 {
     use HasFactory;
     protected $table = 'tenant';
+    protected $guarded = [];
+    protected $dates = ['crated at'];
 }

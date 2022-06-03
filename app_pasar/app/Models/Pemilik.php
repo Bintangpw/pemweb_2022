@@ -9,4 +9,6 @@ class Pemilik extends Model
 {
     use HasFactory;
     protected $table = 'pemilik';
+    protected $guarded = [];
+    protected $dates = ['crated at'];
 }
