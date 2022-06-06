@@ -57,7 +57,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember">
                                     <label class="form-check-label mb-0" for="remember">
-                                        {{ __('Remember me') }}
+                                        {{ __('ingat saya') }}
                                     </label>
                                 </div>
                                 <div>
