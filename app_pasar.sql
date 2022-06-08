@@ -97,9 +97,6 @@ CREATE TABLE `pasar` (
 -- Dumping data for table `pasar`
 --
 
-INSERT INTO `pasar` (`id`, `nama`, `alamat`, `kode_pasar`, `created_by`, `edited_by`, `created_at`, `updated_at`) VALUES
-(1, 'Pasar Johar', 'Semarang Utara', 'PJ', NULL, NULL, '2022-06-03 00:06:23', '2022-06-03 02:07:18'),
-(4, 'Pasar Gede', 'Bandung', 'PG', NULL, NULL, '2022-06-03 01:18:44', '2022-06-03 01:18:44');
 
 -- --------------------------------------------------------
 
@@ -135,9 +132,6 @@ CREATE TABLE `pemilik` (
 --
 -- Dumping data for table `pemilik`
 --
-
-INSERT INTO `pemilik` (`id`, `nama`, `alamat`, `nik`, `no_wa`, `no_telp`, `created_by`, `edited_by`, `created_at`, `updated_at`) VALUES
-(1, 'Bintang', 'Semarang Utara', '3506255555', '087736623997', '035-55555', NULL, NULL, '2022-06-03 00:06:46', '2022-06-03 02:15:10');
 
 -- --------------------------------------------------------
 
@@ -181,8 +175,6 @@ CREATE TABLE `tenant` (
 -- Dumping data for table `tenant`
 --
 
-INSERT INTO `tenant` (`id`, `nama`, `id_pemilik`, `latitude_tenant`, `longitude_tenant`, `harga_iuran`, `id_pasar`, `created_by`, `edited_by`, `created_at`, `updated_at`) VALUES
-(5, 'Kios Sejahtera Abadi', 1, '12345', '12345', '250000', 1, NULL, NULL, '2022-06-03 02:16:37', '2022-06-03 02:23:06');
 
 -- --------------------------------------------------------
 
