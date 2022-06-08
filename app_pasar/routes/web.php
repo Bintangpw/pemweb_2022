@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Pasar;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -24,9 +25,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    $jumlah_pasar = Pasar::count();
+    return view('home', compact('jumlah_pasar'));
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/jumlah', [App\Http\Controllers\HomeController::class, 'jumlah'])->name('jumlah');
 
 Route::middleware('auth')->group(function () {
     Route::view('about', 'about')->name('about');
