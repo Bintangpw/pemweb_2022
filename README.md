@@ -2,10 +2,5 @@
 
 Tugas besar pemweb kelompok 2
 
-Cara menjalankan laravel:
+cara jalaninnya tinggal clone sama migration, tapi bagian created_by sama edited_by dibikin null dulu manual di localhost
 
-1. buka XAMPP
-2. jalankan apache dan sql
-3. buat db namanya app_pasar
-4. jalankan laravel pakai php artisan atau valet
-5. nanti ada error tu gapapa, itu cuma minta migration database
