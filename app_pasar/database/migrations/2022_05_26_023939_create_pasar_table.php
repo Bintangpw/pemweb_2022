@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('nama', 200);
             $table->string('alamat', 200);
             $table->string('kode_pasar', 200);
+            $table->string('foto');
             $table->foreignId('created_by')->constrained('users');
             $table->foreignId('edited_by')->constrained('users');
             $table->timestamps();

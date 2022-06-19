@@ -42,6 +42,12 @@
                     <input type="text" name="id_pasar" id="id_pasar" class="form-control" autocomplete="off" value="{{ $tenant->id_pasar }}" />
                     </div>
                 </div>
+                <div class="mb-3 row">
+                    <label for="foto" class="col-sm-2 col-form-label">Foto Tenant</label>
+                    <div class="col-sm-5">
+                    <input type="file" name="foto" id="foto" class="form-control" autocomplete="off" value="{{ $tenant->foto }}"/>
+                    </div>
+                </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
 

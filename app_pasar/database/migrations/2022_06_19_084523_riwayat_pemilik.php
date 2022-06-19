@@ -13,15 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tenant', function (Blueprint $table) {
+        Schema::create('riwayat_pemilik', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama', 200);
-            $table->foreignId('id_pemilik')->constrained('pemilik');
-            $table->string('latitude_tenant', 200);
-            $table->string('longitude_tenant', 200);
-            $table->string('harga_iuran', 200);
-            $table->foreignId('id_pasar')->constrained('pasar');
-            $table->string('foto');
+            $table->foreignId('id_tenant')->constrained('tenant');
+            $table->date('tgl_transaksi');
+            $table->foreignId('id_pemilik_lama')->constrained('pemilik');
+            $table->foreignId('id_pemilik_baru')->constrained('pemilik');
             $table->foreignId('created_by')->constrained('users')->nullable();
             $table->foreignId('edited_by')->constrained('users')->nullable();
             $table->timestamps();
@@ -35,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tenant');
+        Schema::dropIfExists('riwayat_pemilik');
     }
 };

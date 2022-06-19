@@ -36,6 +36,12 @@
                     <input type="text" name="no_telp" id="no_telp" class="form-control" autocomplete="off" />
                     </div>
                 </div>
+                <div class="mb-3 row">
+                    <label for="foto" class="col-sm-2 col-form-label">Foto Pedagang</label>
+                    <div class="col-sm-5">
+                    <input type="file" name="foto" id="foto" class="form-control" autocomplete="off" />
+                    </div>
+                </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
 

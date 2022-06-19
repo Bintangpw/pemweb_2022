@@ -2,7 +2,7 @@
     <li class="nav-item">
         <a href="{{ route('home') }}" class="nav-link d-flex align-items-center">
             <span class="sidebar-icon me-3">
-                <img src="images/brand/logo.png" height="40" width="70" alt="Volt Logo">
+                <img src="{{ asset('images/brand/logo.png') }}" height="40" width="70">
             </span>
             <span class="mt-1 ms-1 sidebar-text">
                 Pasar 4.0
@@ -83,6 +83,24 @@
                             <i class="fas"></i>
                         </span>
                         <span class="sidebar-text">{{ __('Data Pedagang') }}</span>
+                    </a>
+                    <a href="{{ route('pengelola') }}" class="nav-link">
+                        <span class="sidebar-icon me-3">
+                            <i class="fas"></i>
+                        </span>
+                        <span class="sidebar-text">{{ __('Data Pengelola') }}</span>
+                    </a>
+                    <a href="{{ route('riwayat_pemilik') }}" class="nav-link">
+                        <span class="sidebar-icon me-3">
+                            <i class="fas"></i>
+                        </span>
+                        <span class="sidebar-text">{{ __('Riwayat Pedagang') }}</span>
+                    </a>
+                    <a href="{{ route('riwayat_iuran') }}" class="nav-link">
+                        <span class="sidebar-icon me-3">
+                            <i class="fas"></i>
+                        </span>
+                        <span class="sidebar-text">{{ __('Riwayat Iuran') }}</span>
                     </a>
                 </li>
             </ul>

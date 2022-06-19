@@ -3,29 +3,29 @@
 @section('content')
     <div class="main py-4">
         <div class="card card-body border-0 shadow table-wrapper table-responsive">
-            <h2 class="mb-4 h5">{{ __('Tambah Data Pasar') }}</h2>
-            <form action="insertPasar" method="POST" enctype="multipart/form-data">
+            <h2 class="mb-4 h5">{{ __('Tambah Data Pengelola') }}</h2>
+            <form action="insertPengelola" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 row">
-                    <label for="nomorRegistrasi" class="col-sm-2 col-form-label">Nama Pasar</label>
+                    <label class="col-sm-2 col-form-label">Nama Pengelola</label>
                     <div class="col-sm-5">
                     <input type="text" name="nama" id="nama" class="form-control" autocomplete="off" />
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="nomorRegistrasi" class="col-sm-2 col-form-label">Alamat Pasar</label>
+                    <label class="col-sm-2 col-form-label">Alamat Pengelola</label>
                     <div class="col-sm-5">
                     <input type="text" name="alamat" id="alamat" class="form-control" autocomplete="off" />
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="nomorRegistrasi" class="col-sm-2 col-form-label">Kode Pasar</label>
+                    <label class="col-sm-2 col-form-label">Id Pasar</label>
                     <div class="col-sm-5">
-                    <input type="text" name="kode_pasar" id="kode" class="form-control" autocomplete="off" />
+                    <input type="text" name="id_pasar" id="id_pasar" class="form-control" autocomplete="off" />
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="foto" class="col-sm-2 col-form-label">Foto Pasar</label>
+                    <label class="col-sm-2 col-form-label">Foto Pengelola</label>
                     <div class="col-sm-5">
                     <input type="file" name="foto" id="foto" class="form-control" autocomplete="off" />
                     </div>

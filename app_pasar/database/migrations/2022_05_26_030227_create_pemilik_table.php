@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('nik', 200);
             $table->string('no_wa', 200)->nullable();
             $table->string('no_telp', 200)->nullable();
+            $table->string('foto');
             $table->foreignId('created_by')->constrained('users');
             $table->foreignId('edited_by')->constrained('users');
             $table->timestamps();

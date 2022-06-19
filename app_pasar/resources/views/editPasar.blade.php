@@ -24,6 +24,12 @@
                     <input type="text" name="kode_pasar" id="kode" class="form-control" autocomplete="off" value="{{ $pasar->kode_pasar }}" />
                     </div>
                 </div>
+                <div class="mb-3 row">
+                    <label for="foto" class="col-sm-2 col-form-label">Foto Pasar</label>
+                    <div class="col-sm-5">
+                    <input type="file" name="foto" id="foto" class="form-control" autocomplete="off" value="{{ $pasar->foto }}" />
+                    </div>
+                </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>

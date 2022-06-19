@@ -26,10 +26,4 @@ class HomeController extends Controller
     {
         return view('home');
     }
-
-    public function jumlah()
-    {
-        $jumlah_pasar = Pasar::count();
-        return view('home', compact('jumlah_pasar'));
-    }
 }

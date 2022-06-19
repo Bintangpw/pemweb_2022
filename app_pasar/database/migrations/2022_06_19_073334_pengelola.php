@@ -13,13 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tenant', function (Blueprint $table) {
+        Schema::create('pengelola', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama', 200);
-            $table->foreignId('id_pemilik')->constrained('pemilik');
-            $table->string('latitude_tenant', 200);
-            $table->string('longitude_tenant', 200);
-            $table->string('harga_iuran', 200);
+            $table->string('alamat', 200);
             $table->foreignId('id_pasar')->constrained('pasar');
             $table->string('foto');
             $table->foreignId('created_by')->constrained('users')->nullable();
@@ -35,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tenant');
+        Schema::dropIfExists('pengelola');
     }
 };
