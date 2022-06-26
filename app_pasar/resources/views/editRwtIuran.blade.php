@@ -37,6 +37,12 @@
                     <input type="date" name="tgl_bayar" id="tgl_bayar" class="form-control" autocomplete="off" value="{{ $riwayat_iuran->tgl_bayar }}" />
                     </div>
                 </div>
+                <div class="mb-3 row">
+                    <label for="created" class="col-sm-2 col-form-label">Edited By</label>
+                    <div class="col-sm-5">
+                    <input type="text" name="edited_by" id="edited_by" class="form-control" autocomplete="off" />
+                    </div>
+                </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
 

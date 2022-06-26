@@ -25,6 +25,18 @@
                     </div>
                 </div>
                 <div class="mb-3 row">
+                    <label for="created" class="col-sm-2 col-form-label">Created By</label>
+                    <div class="col-sm-5">
+                    <input type="text" name="created_by" id="created_by" class="form-control" autocomplete="off" />
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="created" class="col-sm-2 col-form-label">Edited By</label>
+                    <div class="col-sm-5">
+                    <input type="text" name="edited_by" id="edited_by" class="form-control" autocomplete="off" />
+                    </div>
+                </div>
+                <div class="mb-3 row">
                     <label for="foto" class="col-sm-2 col-form-label">Foto Pasar</label>
                     <div class="col-sm-5">
                     <input type="file" name="foto" id="foto" class="form-control" autocomplete="off" />

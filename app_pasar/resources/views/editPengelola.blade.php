@@ -25,9 +25,20 @@
                     </div>
                 </div>
                 <div class="mb-3 row">
+                    <label for="created" class="col-sm-2 col-form-label">Edited By</label>
+                    <div class="col-sm-5">
+                    <input type="text" name="edited_by" id="edited_by" class="form-control" autocomplete="off" />
+                    </div>
+                </div>
+                <div class="mb-3 row">
                     <label for="foto" class="col-sm-2 col-form-label">Foto Pengelola</label>
                     <div class="col-sm-5">
-                    <input type="file" name="foto" id="foto" class="form-control" autocomplete="off" value="{{ $pengelola->foto }}" />
+                        @if ($pengelola->foto)
+                            <img src="{{ asset('fotopengelola/'.$pengelola->foto) }}" alt="" style="width: 300px">
+                        @else
+                            <img style="width: 300px">
+                        @endif
+                    <input type="file" name="foto" id="foto" class="form-control" autocomplete="off" />
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>

@@ -64,7 +64,7 @@
             <div class="col-6 col-lg-2 offset-lg-1 mb-3">
               <h5>Links</h5>
               <ul class="list-unstyled">
-                <li class="mb-2"><a href="/">Home</a></li>
+                <li class="mb-2"><a href="{{ route('guest') }}">Home</a></li>
                 <li class="mb-2"><a href="/">Tentang Pasar 4.0</a></li>
                 <li class="mb-2"><a href="/">Berita</a></li>
               </ul>

@@ -7,7 +7,10 @@
 
             <div class="d-flex flex-row bd-highlight mb-3">
                 <div class="w-10 p-2 bd-highlight">
+                    @auth
                     <a href="tambahPemilik" class="mb-2 btn btn-success btn-sm">Tambah</a>
+                    @endauth
+                    
                 </div>
                 <div class="w-30 p-2 bd-highlight">
                     <form action="pemilik" method="GET">
@@ -55,8 +58,10 @@
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <a href="/seePemilik/{{ $pemilik->id }}" class="btn btn-info btn-sm">Lihat</a>
+                                    @auth
                                     <a href="/showPemilik/{{ $pemilik->id }}" class="btn btn-warning btn-sm">Edit</a>
                                     <a href="/deletePemilik/{{ $pemilik->id }}" class="btn btn-danger btn-sm">Hapus</a>
+                                    @endauth
                                 </div>
                             </td>
                         </tr>

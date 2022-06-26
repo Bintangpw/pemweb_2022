@@ -1,11 +1,15 @@
 <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
     <div class="d-flex align-items-center">
         <div class="avatar-lg me-4">
+            @auth
             <img class="card-img-top rounded-circle border-white"
-                src="https://ui-avatars.com/api/?background=random&name={{ Auth::user()->name }}"
-                alt="{{ Auth::user()->name }}">
+            src="https://ui-avatars.com/api/?background=random&name={{ Auth::user()->name }}"
+            alt="{{ Auth::user()->name }}">
+            @endauth
+            
         </div>
         <div class="d-block">
+            @auth
             <h2 class="h5 mb-3">Hi, {{ auth()->user()->name }}</h2>
             <a class="btn btn-secondary btn-sm d-inline-flex align-items-center" href="{{ route('logout') }}" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
@@ -20,6 +24,8 @@
                 </svg>
                 {{ __('Log Out') }}
             </a>
+            @endauth
+            
         </div>
     </div>
     <div class="collapse-close d-md-none">

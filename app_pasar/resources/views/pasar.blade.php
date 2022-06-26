@@ -6,7 +6,10 @@
             <h2 class="mb-2 h5">{{ __('Tabel Pasar') }}</h2>
             <div class="d-flex flex-row bd-highlight mb-3">
                 <div class="w-10 p-2 bd-highlight">
+                    @auth
                     <a href="tambahPasar" class="mb-2 btn btn-success btn-sm">Tambah</a>
+                    @endauth
+                    
                 </div>
                 <div class="w-20 p-2 bd-highlight">
                     <form action="pasar" method="GET">
@@ -25,7 +28,7 @@
             <table class="table table-hover text-center">
                 <thead>
                     <tr>
-                        <th class="border-gray-200">{{ __('id_pasar') }}</th>
+                        <th class="border-gray-200">{{ __('id pasar') }}</th>
                         <th class="border-gray-200">{{ __('Nama Pasar') }}</th>
                         <th class="border-gray-200">{{ __('Alamat Pasar') }}</th>
                         <th class="border-gray-200">{{ __('Kode Pasar') }}</th>
@@ -50,8 +53,10 @@
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <a href="/seePasar/{{ $pasar->id }}" class="btn btn-info btn-sm">Lihat</a>
+                                    @auth
                                     <a href="/showPasar/{{ $pasar->id }}" class="btn btn-warning btn-sm">Edit</a>
                                     <a href="/deletePasar/{{ $pasar->id }}" class="btn btn-danger btn-sm">Hapus</a>
+                                    @endauth
                                 </div>
                             </td>
                         </tr>
@@ -59,6 +64,5 @@
                 </tbody>
             </table>
         </div>
-        
     </div>
 @endsection

@@ -7,7 +7,10 @@
             
             <div class="d-flex flex-row bd-highlight mb-3">
                 <div class="w-10 p-2 bd-highlight">
+                    @auth
                     <a href="tambahTenant" class="mb-2 btn btn-success btn-sm">Tambah</a>
+                    @endauth
+                    
                 </div>
                 <div class="w-30 p-2 bd-highlight">
                     <form action="tenant" method="GET">
@@ -57,8 +60,11 @@
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
                                     <a href="/seeTenant/{{ $tenant->id }}" class="btn btn-info btn-sm">Lihat</a>
+                                    @auth
                                     <a href="/showTenant/{{ $tenant->id }}" class="btn btn-warning btn-sm">Edit</a>
                                     <a href="/deleteTenant/{{ $tenant->id }}" class="btn btn-danger btn-sm">Hapus</a>
+                                    @endauth
+                                    
                                 </div>
                             </td>
                         </tr>
