@@ -21,9 +21,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = DB::table('users')->count();
+        $pemilik = DB::table('pemilik')->count();
         $pasar = DB::table('pasar')->count();
         $tenant = DB::table('tenant')->count();
-        return view('home', compact('users', 'pasar', 'tenant'));
+        return view('home', compact('pemilik', 'pasar', 'tenant'));
     }
 }
