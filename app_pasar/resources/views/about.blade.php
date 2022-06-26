@@ -7,8 +7,8 @@
                 <div class="col-12 px-0">
                     <div class="card border-0 shadow">
                         <div class="card-body">
-                            <h2 class="fs-5 fw-bold mb-1">{{ __('About us') }}</h2>
-                            <p>{{ __('Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore inventore in dolore soluta architecto culpa eveniet sit aspernatur? Quidem, deleniti eligendi ratione unde et obcaecati praesentium quod veniam illo iure ad sint exercitationem quibusdam molestiae? Dolore illum quaerat tempora saepe atque quas explicabo, adipisci ex error veniam ab facilis tenetur nesciunt quis culpa doloribus ea quia recusandae assumenda? Consequuntur, sed!') }}</p>
+                            <h2 class="fs-5 fw-bold mb-1">{{ __('About Us') }}</h2>
+                            <p>{{ __('Pasar 4.0 merupakan website yang dapat digunakan dengan mudah untuk mengelola berbagai data terkait dengan pasar. Pada website ini, pengelola dapat memasukkan berbagai hal yang berguna yang nantinya agar semua user dari website ini mengetahui terkait dengan data pasar yang ada.') }}</p>
                         </div>
                     </div>
                 </div>

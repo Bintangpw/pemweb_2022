@@ -41,7 +41,7 @@
                     <div class="p-2"><img src="../images/brand/logo.png" alt="" style="max-width: 300px"></div>
                     <div class="d-flex flex-column mb-3 justify-content-center text-white text-center">
                         <div class="p-2"><h1>Selamat Datang di Pasar 4.0</h1></div>
-                        <div class="p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sapiente illo enim illum velit aspernatur nisi iure perspiciatis qui vel numquam similique, ut, dolor architecto molestias beatae! Explicabo saepe nisi, quo unde quasi blanditiis quos. Facilis maxime mollitia culpa. Exercitationem iste facere suscipit fugit voluptatem nihil! Quis earum pariatur eius veritatis non dolore rem veniam delectus at exercitationem, mollitia obcaecati.</div>
+                        <div class="p-2">Pasar 4.0 merupakan website yang dapat digunakan dengan mudah untuk mengelola berbagai data terkait dengan pasar. Pada website ini, pengelola dapat memasukkan berbagai hal yang berguna yang nantinya agar semua user dari website ini mengetahui terkait dengan data pasar yang ada.</div>
                     </div>
                 </div>
             </div>

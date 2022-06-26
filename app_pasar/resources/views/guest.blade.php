@@ -7,26 +7,26 @@
 
         <div class="section-title">
           <h2>About Us</h2>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro facere deserunt eius dolore consequatur! Dicta provident obcaecati animi nam eos dolore quas doloremque? Iusto maxime molestias deserunt adipisci error voluptatibus totam hic, voluptate vero? Accusamus id quia, praesentium esse nobis tempora est? Consequatur, voluptatum assumenda tenetur inventore doloremque recusandae vel enim, iure fugiat amet exercitationem. Voluptatum nihil id, nobis repudiandae quisquam numquam officiis, ea at sequi, corporis culpa deleniti. Autem velit dolore, voluptas reiciendis facilis, consequatur ipsum officia culpa vel, illum quidem rerum. Aliquam esse ullam possimus fuga, suscipit vitae consequatur non vel facilis itaque adipisci repellat, placeat architecto quia! </p>
+          <p>Pasar 4.0 merupakan website yang dapat digunakan dengan mudah untuk mengelola berbagai data terkait dengan pasar. Pada website ini, pengelola dapat memasukkan berbagai hal yang berguna yang nantinya agar semua user dari website ini mengetahui terkait dengan data pasar yang ada.</p>
         </div>
 
         <div class="row content">
           <div class="col-lg-10">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            Fitur yang dihadirkan di dalam website ini:
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+              <li><i class="ri-check-double-line"></i> Pengelolaan data pasar</li>
+              <li><i class="ri-check-double-line"></i> Pengelolaan data tenant</li>
+              <li><i class="ri-check-double-line"></i> Pengelolaan data pedagang</li>
+              <li><i class="ri-check-double-line"></i> Pengelolaan data pengelola</li>
+              <li><i class="ri-check-double-line"></i> Pengelolaan data riwayat kepemilikan</li>
+              <li><i class="ri-check-double-line"></i> Pengelolaan data riwayat iuran</li>
             </ul>
           </div>
           <div class="col-lg-10 pt-4 pt-lg-0">
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+              Pelajari mengenai Pasar 4.0 lebih lanjut.
             </p>
             <a href="#" class="btn-learn-more">Learn More</a>
           </div>
@@ -173,56 +173,37 @@
 
         <div class="section-title">
           <h2>Frequently Asked Questions</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Solusi bagi Anda yang ingin mengetahui website kami lebih lanjut.</p>
         </div>
 
         <div class="faq-list">
           <ul>
-            <li data-aos="fade-up">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Apa itu Pasar 4.0? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
                 <p>
-                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
+                Pasar 4.0 merupakan website yang dapat digunakan dengan mudah untuk mengelola berbagai data terkait dengan pasar.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="400">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Apa keuntungan menggunakan Pasar 4.0? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                Pada website ini, pengelola dapat memasukkan berbagai hal yang berguna yang nantinya agar semua user dari website ini mengetahui terkait dengan data pasar yang ada.
                 </p>
               </div>
             </li>
 
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Apa saja fitur yang ditawarkan di dalam Pasar 4.0? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                Pengelolaan data pasar, data tenant, data pedagang, data pengelola, data riwayat kepemilikan, dan data iuran.
+                </p>
+              </div>
+            </li>
           </ul>
         </div>
 
