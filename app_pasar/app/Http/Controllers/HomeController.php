@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pasar;
 use Illuminate\Http\Request;
+use DB;
+
 
 class HomeController extends Controller
 {
@@ -20,6 +21,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $users = DB::table('users')->count();
+        $pasar = DB::table('pasar')->count();
+        $tenant = DB::table('tenant')->count();
+        return view('home', compact('users', 'pasar', 'tenant'));
     }
 }

@@ -24,7 +24,7 @@
                                                 <div class="col-12 col-xl-7 px-xl-0" bis_skin_checked="1">
                                                     <div class="d-none d-sm-block" bis_skin_checked="1">
                                                         <h2 class="h5">Jumlah User</h2>
-                                                        <h3 class="fw-extrabold mb-1">3</h3>
+                                                        <h3 class="fw-extrabold mb-1">{{ $users }}</h3>
                                                     </div>
                                                 </div>
                                             </div>
@@ -48,7 +48,7 @@
                                                 <div class="col-12 col-xl-7 px-xl-0" bis_skin_checked="1">
                                                     <div class="d-none d-sm-block" bis_skin_checked="1">
                                                         <h2 class="h5">Jumlah Pasar</h2>
-                                                        <h3 class="fw-extrabold mb-1">2</h3>
+                                                        <h3 class="fw-extrabold mb-1">{{ $pasar }}</h3>
                                                     </div>
                                                     
                                                 </div>
@@ -73,7 +73,7 @@
                                                 <div class="col-12 col-xl-7 px-xl-0" bis_skin_checked="1">
                                                     <div class="d-none d-sm-block" bis_skin_checked="1">
                                                         <h2 class="h5">Jumlah Tenant</h2>
-                                                        <h3 class="fw-extrabold mb-1">5</h3>
+                                                        <h3 class="fw-extrabold mb-1">{{ $tenant }}</h3>
                                                     </div>
                                                 </div>
                                             </div>
