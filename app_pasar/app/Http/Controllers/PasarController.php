@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Pasar;
 use Illuminate\Support\Facades\Storage;
+use PDF;
 
 class PasarController extends Controller
 {
@@ -76,5 +77,14 @@ class PasarController extends Controller
     public function lihatPasar(Request $request, $id)
     {
         $pasar = Pasar::find($id);
+    }
+
+    public function exportpdfPasar()
+    {
+        $pasar = Pasar::all();
+        
+        view()->share('pasar', $pasar);
+        $pdfPasar = PDF::loadview('pasar-pdf')->setPaper('a4', 'landscape'); 
+        return $pdfPasar->download('Pasar.pdf');
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Pemilik;
 use Illuminate\Support\Facades\Storage;
+use PDF;
 
 class PemilikController extends Controller
 {
@@ -75,5 +76,14 @@ class PemilikController extends Controller
     public function lihatPemilik(Request $request, $id)
     {
         $pemilik = Pemilik::find($id);
+    }
+
+    public function exportpdfPemilik()
+    {
+        $pemilik = Pemilik::all();
+        
+        view()->share('pemilik', $pemilik);
+        $pdfPemilik= PDF::loadview('pemilik-pdf')->setPaper('a4', 'landscape'); 
+        return $pdfPemilik->download('Pedagang.pdf');
     }
 }

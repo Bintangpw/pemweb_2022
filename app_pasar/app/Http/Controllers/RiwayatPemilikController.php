@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\RiwayatPemilik;
 use Illuminate\Support\Facades\Storage;
+use PDF;
 
 class RiwayatPemilikController extends Controller
 {
@@ -48,5 +49,14 @@ class RiwayatPemilikController extends Controller
         $riwayat_pemilik = RiwayatPemilik::find($id);
         $riwayat_pemilik->delete();
         return redirect()->route('riwayat_pemilik')->with('success', 'Data Berhasil Dihapus');
+    }
+
+    public function  exportpdfRwtPemilik()
+    {
+        $riwayat_pemilik = RiwayatPemilik::all();
+        
+        view()->share('riwayat_pemilik', $riwayat_pemilik);
+        $pdfRiwayatPemilik = PDF::loadview('riwayat_pemilik-pdf')->setPaper('a4', 'landscape'); 
+        return $pdfRiwayatPemilik->download('Riwayat Pedagang.pdf');
     }
 }

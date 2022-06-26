@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\RiwayatIuran;
 use Illuminate\Support\Facades\Storage;
+use PDF;
 
 class RiwayatIuranController extends Controller
 {
@@ -48,5 +49,13 @@ class RiwayatIuranController extends Controller
         $riwayat_iuran = RiwayatIuran::find($id);
         $riwayat_iuran->delete();
         return redirect()->route('riwayat_iuran')->with('success', 'Data Berhasil Dihapus');
+    }
+    public function exportpdfRwtIuran()
+    {
+        $riwayat_iuran = RiwayatIuran::all();
+        
+        view()->share('riwayat_iuran', $riwayat_iuran);
+        $pdfRiwayatIuran = PDF::loadview('riwayat_iuran-pdf')->setPaper('a4', 'landscape'); 
+        return $pdfRiwayatIuran->download('Riwayat Iuran.pdf');
     }
 }

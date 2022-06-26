@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Pengelola;
 use Illuminate\Support\Facades\Storage;
+use PDF;
 
 class PengelolaController extends Controller
 {
@@ -75,5 +76,14 @@ class PengelolaController extends Controller
     public function lihatPengelola(Request $request, $id)
     {
         $pengelola = Pengelola::find($id);
+    }
+
+    public function exportpdfPengelola()
+    {
+        $pengelola = Pengelola::all();
+        
+        view()->share('pengelola', $pengelola);
+        $pdfPengelola = PDF::loadview('pengelola-pdf')->setPaper('a4', 'landscape'); 
+        return $pdfPengelola->download('Pengelola.pdf');
     }
 }

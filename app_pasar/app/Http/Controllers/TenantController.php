@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Tenant;
 use Illuminate\Support\Facades\Storage;
+use PDF;
 
 class TenantController extends Controller
 {
@@ -75,5 +76,14 @@ class TenantController extends Controller
     public function lihatTenant(Request $request, $id)
     {
         $tenant = Tenant::find($id);
+    }
+
+    public function exportpdfTenant()
+    {
+        $tenant = Tenant::all();
+        
+        view()->share('tenant', $tenant);
+        $pdfTenant = PDF::loadview('tenant-pdf')->setPaper('a4', 'landscape'); 
+        return $pdfTenant->download('Kios.pdf');
     }
 }

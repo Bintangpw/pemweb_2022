@@ -42,24 +42,28 @@ Route::middleware('auth')->group(function () {
     Route::post('editPasar/{id}', [\App\Http\Controllers\PasarController::class, 'editPasar'])->name('editPasar');
     Route::get('deletePasar/{id}', [\App\Http\Controllers\PasarController::class, 'delete'])->name('delete');
     Route::get('showPasar/{id}', [\App\Http\Controllers\PasarController::class, 'showPasar'])->name('showPasar');
+    Route::get('exportpdfPasar', [\App\Http\Controllers\PasarController::class, 'exportpdfPasar'])->name('exportpdfPasar');
 
     Route::get('tambahTenant', [\App\Http\Controllers\TenantController::class, 'tambahTenant'])->name('tambahTenant');
     Route::post('insertTenant', [\App\Http\Controllers\TenantController::class, 'insertTenant'])->name('insertTenant');
     Route::post('editTenant/{id}', [\App\Http\Controllers\TenantController::class, 'editTenant'])->name('editTenant');
     Route::get('deleteTenant/{id}', [\App\Http\Controllers\TenantController::class, 'delete'])->name('delete');
     Route::get('showTenant/{id}', [\App\Http\Controllers\TenantController::class, 'showTenant'])->name('showTenant');
+    Route::get('exportpdfTenant', [\App\Http\Controllers\TenantController::class, 'exportpdfTenant'])->name('exportpdfTenant');
 
     Route::get('tambahPemilik', [\App\Http\Controllers\PemilikController::class, 'tambahPemilik'])->name('tambahPemilik');
     Route::post('insertPemilik', [\App\Http\Controllers\PemilikController::class, 'insertPemilik'])->name('insertPemilik');
     Route::post('editPemilik/{id}', [\App\Http\Controllers\PemilikController::class, 'editPemilik'])->name('editPemilik');
     Route::get('deletePemilik/{id}', [\App\Http\Controllers\PemilikController::class, 'delete'])->name('delete');
     Route::get('showPemilik/{id}', [\App\Http\Controllers\PemilikController::class, 'showPemilik'])->name('showPemilik');
+    Route::get('exportpdfPemilik', [\App\Http\Controllers\PemilikController::class, 'exportpdfPemilik'])->name('exportpdfPemilik');
 
     Route::get('tambahPengelola', [\App\Http\Controllers\PengelolaController::class, 'tambahPengelola'])->name('tambahPengelola');
     Route::post('insertPengelola', [\App\Http\Controllers\PengelolaController::class, 'insertPengelola'])->name('insertPengelola');
     Route::post('editPengelola/{id}', [\App\Http\Controllers\PengelolaController::class, 'editPengelola'])->name('editPengelola');
     Route::get('deletePengelola/{id}', [\App\Http\Controllers\PengelolaController::class, 'delete'])->name('delete');
     Route::get('showPengelola/{id}', [\App\Http\Controllers\PengelolaController::class, 'showPengelola'])->name('showPengelola');
+    Route::get('exportpdfPengelola', [\App\Http\Controllers\PengelolaController::class, 'exportpdfPengelola'])->name('exportpdfPengelola');
 
     Route::get('riwayat_pemilik', [\App\Http\Controllers\RiwayatPemilikController::class, 'index'])->name('riwayat_pemilik');
     Route::get('tambahRwtPemilik', [\App\Http\Controllers\RiwayatPemilikController::class, 'tambahRwtPemilik'])->name('tambahRwtPemilik');
@@ -67,6 +71,7 @@ Route::middleware('auth')->group(function () {
     Route::post('editRwtPemilik/{id}', [\App\Http\Controllers\RiwayatPemilikController::class, 'editRwtPemilik'])->name('editRwtPemilik');
     Route::get('deleteRwtPemilik/{id}', [\App\Http\Controllers\RiwayatPemilikController::class, 'delete'])->name('delete');
     Route::get('showRwtPemilik/{id}', [\App\Http\Controllers\RiwayatPemilikController::class, 'showRwtPemilik'])->name('showRwtPemilik');
+    Route::get('exportpdfRwtPemilik', [\App\Http\Controllers\RiwayatPemilikController::class, 'exportpdfRwtPemilik'])->name('exportpdfRwtPemilik');
 
     Route::get('riwayat_iuran', [\App\Http\Controllers\RiwayatIuranController::class, 'index'])->name('riwayat_iuran');
     Route::get('tambahRwtIuran', [\App\Http\Controllers\RiwayatIuranController::class, 'tambahRwtIuran'])->name('tambahRwtIuran');
@@ -74,6 +79,7 @@ Route::middleware('auth')->group(function () {
     Route::post('editRwtIuran/{id}', [\App\Http\Controllers\RiwayatIuranController::class, 'editRwtIuran'])->name('editRwtIuran');
     Route::get('deleteRwtIuran/{id}', [\App\Http\Controllers\RiwayatIuranController::class, 'delete'])->name('delete');
     Route::get('showRwtIuran/{id}', [\App\Http\Controllers\RiwayatIuranController::class, 'showRwtIuran'])->name('showRwtIuran');
+    Route::get('exportpdfRwtIuran', [\App\Http\Controllers\RiwayatIuranController::class, 'exportpdfRwtIuran'])->name('exportpdfRwtIuran');
     
 });
 

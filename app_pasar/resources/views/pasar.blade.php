@@ -23,6 +23,9 @@
                         </div>
                     @endif
                 </div>
+                <div class="w-10 p-2 bd-highlight">
+                    <a href="exportpdfPasar" class="mb-2 btn btn-info btn-sm">Export PDF</a>
+                </div>
             </div>
 
             <table class="table table-hover text-center">
