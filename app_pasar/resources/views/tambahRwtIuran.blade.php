@@ -3,7 +3,7 @@
 @section('content')
     <div class="main py-4">
         <div class="card card-body border-0 shadow table-wrapper table-responsive">
-            <h2 class="mb-4 h5">{{ __('Tambah Data Pemilik') }}</h2>
+            <h2 class="mb-4 h5">{{ __('Tambah Data Riwayat Iuran') }}</h2>
             <form action="insertRwtIuran" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 row">
