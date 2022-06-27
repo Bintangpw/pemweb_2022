@@ -3,7 +3,7 @@
 @section('content')
     <div class="main py-4">
         <div class="card card-body border-0 shadow table-wrapper table-responsive">
-            <h2 class="mb-4 h5">{{ __('Edit Data Riwayat Iuran') }}</h2>
+            <h2 class="mb-4 h5">{{ __('Edit Data Riwayat Pedagang') }}</h2>
             <form action="/editRwtPemilik/{{ $riwayat_pemilik->id }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3 row">
