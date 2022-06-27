@@ -240,40 +240,30 @@
                 <h4>Call:</h4>
                 <p>(0271) 646994</p>
               </div>
-
             </div>
-
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            <form class="row g-3" action="insertContact" method="POST" enctype="multipart/form-data">
+              @csrf
+                <div class="col">
+                  <input type="text" name="nama" class="form-control" aria-label="First name" placeholder="Nama">
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                <div class="col">
+                  <input type="text" name="email" class="form-control" aria-label="Last name" placeholder="Email">
                 </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-
+                <div class="col-12">
+                  <input type="text" name="subject" class="form-control" id="subject" placeholder="Subject">
+                </div>
+                <div class="col-12">
+                  <textarea style="resize: none;" class="form-control" name="pesan" id="pesan" rows="5" placeholder="Pesan"></textarea>
+                </div>
+                <div class="col-5">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+          </form>
           </div>
-
         </div>
-
       </div>
     </section><!-- End Contact Section -->
 

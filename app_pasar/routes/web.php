@@ -99,3 +99,4 @@ Route::get('pemilik', [\App\Http\Controllers\PemilikController::class, 'index'])
 Route::get('pengelola', [\App\Http\Controllers\PengelolaController::class, 'index'])->name('pengelola');
 Route::view('about', 'about')->name('about');
 Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('insertContact', [\App\Http\Controllers\GuestController::class, 'insertContact'])->name('insertContact');
