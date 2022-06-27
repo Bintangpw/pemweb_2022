@@ -10,7 +10,7 @@
                 </div>
                 <div class="w-20 p-2 bd-highlight">
                     <form action="riwayat_iuran" method="GET">
-                        <input type="search" name="search" id="kode" class="form-control" autocomplete="off" />
+                        <input type="search" name="search" id="kode" class="form-control" autocomplete="off" placeholder="id tenant"/>
                     </form>
                 </div>
                 <div class="w-10 p-2 bd-highlight">

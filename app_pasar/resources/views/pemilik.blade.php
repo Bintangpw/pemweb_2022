@@ -14,7 +14,7 @@
                 </div>
                 <div class="w-30 p-2 bd-highlight">
                     <form action="pemilik" method="GET">
-                        <input type="search" name="search" id="kode" class="form-control" autocomplete="off" />
+                        <input type="search" name="search" id="kode" class="form-control" autocomplete="off" placeholder="nama pedagang"/>
                     </form>
                 </div>
                 <div class="w-10 p-2 bd-highlight">
