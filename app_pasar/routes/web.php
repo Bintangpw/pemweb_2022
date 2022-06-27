@@ -91,6 +91,8 @@ Route::get('seePemilik/{id}', [\App\Http\Controllers\PemilikController::class, '
 Route::get('lihatPemilik/{id}', [\App\Http\Controllers\PemilikController::class, 'lihatPemilik'])->name('lihatPemilik');
 Route::get('seePasar/{id}', [\App\Http\Controllers\PasarController::class, 'seePasar'])->name('seePasar');
 Route::get('lihatPasar/{id}', [\App\Http\Controllers\PasarController::class, 'lihatPasar'])->name('lihatPasar');
+Route::get('seeTenant/{id}', [\App\Http\Controllers\TenantController::class, 'seeTenant'])->name('seeTenant');
+Route::get('lihatTenant/{id}', [\App\Http\Controllers\TenantController::class, 'lihatTenant'])->name('lihatTenant');
 Route::get('pasar', [\App\Http\Controllers\PasarController::class, 'index'])->name('pasar');
 Route::get('tenant', [\App\Http\Controllers\TenantController::class, 'index'])->name('tenant');
 Route::get('pemilik', [\App\Http\Controllers\PemilikController::class, 'index'])->name('pemilik');
