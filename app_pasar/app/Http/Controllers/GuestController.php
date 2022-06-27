@@ -4,13 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Guest;
+use DB;
 
 class GuestController extends Controller
 {
     public function index(Request $request)
     {
+        $pemilik = DB::table('pemilik')->count();
+        $pasar = DB::table('pasar')->count();
+        $tenant = DB::table('tenant')->count();
+        $pengelola = DB::table('pengelola')->count();
         $guest = Guest::paginate();
-        return view('guest', compact('guest'));
+        return view('guest', compact('guest', 'pemilik', 'pasar', 'tenant', 'pengelola'));
     }
 
     public function insertContact(Request $request)

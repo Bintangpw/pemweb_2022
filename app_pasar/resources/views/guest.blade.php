@@ -43,28 +43,28 @@
 
           <div class="col-lg-3 col-md-3 col-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="2" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $pasar }}" data-purecounter-duration="1" class="purecounter"></span>
               <p>Pasar</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-3 col-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="2" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $pemilik }}" data-purecounter-duration="1" class="purecounter"></span>
               <p>Pedagang</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-3 col-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="2" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $pengelola }}" data-purecounter-duration="1" class="purecounter"></span>
               <p>Pengelola</p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-3 col-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="2" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="{{ $tenant }}" data-purecounter-duration="1" class="purecounter"></span>
               <p>Kios</p>
             </div>
           </div>
