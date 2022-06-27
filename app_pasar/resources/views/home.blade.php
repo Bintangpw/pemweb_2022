@@ -23,8 +23,8 @@
                                                 </div>
                                                 <div class="col-12 col-xl-7 px-xl-0" bis_skin_checked="1">
                                                     <div class="d-none d-sm-block" bis_skin_checked="1">
-                                                        <h2 class="h5">Jumlah User</h2>
-                                                        <h3 class="fw-extrabold mb-1">{{ $users }}</h3>
+                                                        <h2 class="h5">Jumlah Pedagang</h2>
+                                                        <h3 class="fw-extrabold mb-1">{{ $pemilik }}</h3>
                                                     </div>
                                                 </div>
                                             </div>
