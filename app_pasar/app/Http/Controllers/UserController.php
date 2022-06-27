@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::paginate();
+        $user = User::paginate();
 
-        return view('users.index', compact('users'));
+        return view('users.index', compact('user'));
     }
 }

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\GuestController;
 use App\Http\Controllers\PasarController;
 use App\Http\Controllers\TenantController;
 use App\Http\Controllers\PemilikController;
@@ -30,10 +31,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::middleware('auth')->group(function () {
+Route::group(['middleware'=>['auth', 'hakakses:admin']], function() {
+    Route::get('tambahPengelola', [\App\Http\Controllers\PengelolaController::class, 'tambahPengelola'])->name('tambahPengelola');
+    Route::post('insertPengelola', [\App\Http\Controllers\PengelolaController::class, 'insertPengelola'])->name('insertPengelola');
+    Route::post('editPengelola/{id}', [\App\Http\Controllers\PengelolaController::class, 'editPengelola'])->name('editPengelola');
+    Route::get('deletePengelola/{id}', [\App\Http\Controllers\PengelolaController::class, 'delete'])->name('delete');
+    Route::get('showPengelola/{id}', [\App\Http\Controllers\PengelolaController::class, 'showPengelola'])->name('showPengelola');
+    Route::get('exportpdfPengelola', [\App\Http\Controllers\PengelolaController::class, 'exportpdfPengelola'])->name('exportpdfPengelola');
+});
 
+Route::group(['middleware'=>['auth', 'hakakses:admin,pengelola']], function() {
     Route::get('users', [\App\Http\Controllers\UserController::class, 'index'])->name('users.index');
-
+    
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
     
@@ -58,13 +67,6 @@ Route::middleware('auth')->group(function () {
     Route::get('showPemilik/{id}', [\App\Http\Controllers\PemilikController::class, 'showPemilik'])->name('showPemilik');
     Route::get('exportpdfPemilik', [\App\Http\Controllers\PemilikController::class, 'exportpdfPemilik'])->name('exportpdfPemilik');
 
-    Route::get('tambahPengelola', [\App\Http\Controllers\PengelolaController::class, 'tambahPengelola'])->name('tambahPengelola');
-    Route::post('insertPengelola', [\App\Http\Controllers\PengelolaController::class, 'insertPengelola'])->name('insertPengelola');
-    Route::post('editPengelola/{id}', [\App\Http\Controllers\PengelolaController::class, 'editPengelola'])->name('editPengelola');
-    Route::get('deletePengelola/{id}', [\App\Http\Controllers\PengelolaController::class, 'delete'])->name('delete');
-    Route::get('showPengelola/{id}', [\App\Http\Controllers\PengelolaController::class, 'showPengelola'])->name('showPengelola');
-    Route::get('exportpdfPengelola', [\App\Http\Controllers\PengelolaController::class, 'exportpdfPengelola'])->name('exportpdfPengelola');
-
     Route::get('riwayat_pemilik', [\App\Http\Controllers\RiwayatPemilikController::class, 'index'])->name('riwayat_pemilik');
     Route::get('tambahRwtPemilik', [\App\Http\Controllers\RiwayatPemilikController::class, 'tambahRwtPemilik'])->name('tambahRwtPemilik');
     Route::post('insertRwtPemilik', [\App\Http\Controllers\RiwayatPemilikController::class, 'insertRwtPemilik'])->name('insertRwtPemilik');
@@ -80,11 +82,9 @@ Route::middleware('auth')->group(function () {
     Route::get('deleteRwtIuran/{id}', [\App\Http\Controllers\RiwayatIuranController::class, 'delete'])->name('delete');
     Route::get('showRwtIuran/{id}', [\App\Http\Controllers\RiwayatIuranController::class, 'showRwtIuran'])->name('showRwtIuran');
     Route::get('exportpdfRwtIuran', [\App\Http\Controllers\RiwayatIuranController::class, 'exportpdfRwtIuran'])->name('exportpdfRwtIuran');
-    
 });
 
 Route::get('guest', [\App\Http\Controllers\GuestController::class, 'index'])->name('guest');
-
 Route::get('seePengelola/{id}', [\App\Http\Controllers\PengelolaController::class, 'seePengelola'])->name('seePengelola');
 Route::get('lihatPengelola/{id}', [\App\Http\Controllers\PengelolaController::class, 'lihatPengelola'])->name('lihatPengelola');
 Route::get('seePemilik/{id}', [\App\Http\Controllers\PemilikController::class, 'seePemilik'])->name('seePemilik');
