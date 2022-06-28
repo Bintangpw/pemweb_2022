@@ -41,21 +41,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($riwayat_pemilik as $riwayat_pemilik)
+                    @foreach ($riwayat_pemilik as $row)
                         <tr>
-                            <td><span class="fw-normal">{{ $riwayat_pemilik->id }}</span></td>
-                            <td><span class="fw-normal">{{ $riwayat_pemilik->id_tenant }}</span></td>
-                            <td><span class="fw-normal">{{ $riwayat_pemilik->tgl_transaksi }}</span></td>
-                            <td><span class="fw-normal">{{ $riwayat_pemilik->id_pemilik_lama }}</span></td>
-                            <td><span class="fw-normal">{{ $riwayat_pemilik->id_pemilik_baru }}</span></td>
-                            <td><span class="fw-normal">{{ $riwayat_pemilik->created_by }}</span></td>
-                            <td><span class="fw-normal">{{ $riwayat_pemilik->edited_by }}</span></td>
-                            <td><span class="fw-normal">{{ $riwayat_pemilik->created_at }}</span></td>
-                            <td><span class="fw-normal">{{ $riwayat_pemilik->updated_at }}</span></td>
+                            <td><span class="fw-normal">{{ $row->id }}</span></td>
+                            <td><span class="fw-normal">{{ $row->id_tenant }}</span></td>
+                            <td><span class="fw-normal">{{ $row->tgl_transaksi }}</span></td>
+                            <td><span class="fw-normal">{{ $row->id_pemilik_lama }}</span></td>
+                            <td><span class="fw-normal">{{ $row->id_pemilik_baru }}</span></td>
+                            <td><span class="fw-normal">{{ $row->created_by }}</span></td>
+                            <td><span class="fw-normal">{{ $row->edited_by }}</span></td>
+                            <td><span class="fw-normal">{{ $row->created_at }}</span></td>
+                            <td><span class="fw-normal">{{ $row->updated_at }}</span></td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="/showRwtPemilik/{{ $riwayat_pemilik->id }}" class="btn btn-warning btn-sm">Edit</a>
-                                    <a href="/deleteRwtPemilik/{{ $riwayat_pemilik->id }}" class="btn btn-danger btn-sm">Hapus</a>
+                                    <a href="/showRwtPemilik/{{ $row->id }}" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="/deleteRwtPemilik/{{ $row->id }}" class="btn btn-danger btn-sm">Hapus</a>
                                 </div>
                             </td>
                         </tr>
