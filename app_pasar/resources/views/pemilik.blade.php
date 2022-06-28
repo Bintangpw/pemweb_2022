@@ -46,7 +46,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($pemilik as $pemilik)
+                    @foreach ($pemilik as $row)
                         <tr>
                             <td><span class="fw-normal">{{ $row->id }}</span></td>
                             <td><span class="fw-normal">{{ $row->nama }}</span></td>
