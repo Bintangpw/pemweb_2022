@@ -14,7 +14,7 @@ class GuestController extends Controller
         $pasar = DB::table('pasar')->count();
         $tenant = DB::table('tenant')->count();
         $pengelola = DB::table('pengelola')->count();
-        $guest = Guest::paginate();
+        $guest = Guest::paginate(5);
         return view('guest', compact('guest', 'pemilik', 'pasar', 'tenant', 'pengelola'));
     }
 

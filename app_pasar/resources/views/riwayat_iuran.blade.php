@@ -41,27 +41,28 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($riwayat_iuran as $riwayat_iuran)
+                    @foreach ($riwayat_iuran as $row)
                         <tr>
-                            <td><span class="fw-normal">{{ $riwayat_iuran->id }}</span></td>
-                            <td><span class="fw-normal">{{ $riwayat_iuran->id_tenant }}</span></td>
-                            <td><span class="fw-normal">{{ $riwayat_iuran->tahun_bulan }}</span></td>
-                            <td><span class="fw-normal">{{ $riwayat_iuran->jml_bayar }}</span></td>
-                            <td><span class="fw-normal">{{ $riwayat_iuran->tgl_bayar }}</span></td>
-                            <td><span class="fw-normal">{{ $riwayat_iuran->created_by }}</span></td>
-                            <td><span class="fw-normal">{{ $riwayat_iuran->edited_by }}</span></td>
-                            <td><span class="fw-normal">{{ $riwayat_iuran->created_at }}</span></td>
-                            <td><span class="fw-normal">{{ $riwayat_iuran->updated_at }}</span></td>
+                            <td><span class="fw-normal">{{ $row->id }}</span></td>
+                            <td><span class="fw-normal">{{ $row->id_tenant }}</span></td>
+                            <td><span class="fw-normal">{{ $row->tahun_bulan }}</span></td>
+                            <td><span class="fw-normal">{{ $row->jml_bayar }}</span></td>
+                            <td><span class="fw-normal">{{ $row->tgl_bayar }}</span></td>
+                            <td><span class="fw-normal">{{ $row->created_by }}</span></td>
+                            <td><span class="fw-normal">{{ $row->edited_by }}</span></td>
+                            <td><span class="fw-normal">{{ $row->created_at }}</span></td>
+                            <td><span class="fw-normal">{{ $row->updated_at }}</span></td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="/showRwtIuran/{{ $riwayat_iuran->id }}" class="btn btn-warning btn-sm">Edit</a>
-                                    <a href="/deleteRwtIuran/{{ $riwayat_iuran->id }}" class="btn btn-danger btn-sm">Hapus</a>
+                                    <a href="/showRwtIuran/{{ $row->id }}" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="/deleteRwtIuran/{{ $row->id }}" class="btn btn-danger btn-sm">Hapus</a>
                                 </div>
                             </td>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
+            {{ $riwayat_iuran->links() }}
         </div>
         
     </div>

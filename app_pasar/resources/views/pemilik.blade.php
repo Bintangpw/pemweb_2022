@@ -48,22 +48,22 @@
                 <tbody>
                     @foreach ($pemilik as $pemilik)
                         <tr>
-                            <td><span class="fw-normal">{{ $pemilik->id }}</span></td>
-                            <td><span class="fw-normal">{{ $pemilik->nama }}</span></td>
-                            <td><span class="fw-normal">{{ $pemilik->alamat }}</span></td>
-                            <td><span class="fw-normal">{{ $pemilik->nik }}</span></td>
-                            <td><span class="fw-normal">{{ $pemilik->no_wa }}</span></td>
-                            <td><span class="fw-normal">{{ $pemilik->no_telp }}</span></td>
-                            <td><span class="fw-normal">{{ $pemilik->created_by }}</span></td>
-                            <td><span class="fw-normal">{{ $pemilik->edited_by }}</span></td>
-                            <td><span class="fw-normal">{{ $pemilik->created_at }}</span></td>
-                            <td><span class="fw-normal">{{ $pemilik->updated_at }}</span></td>
+                            <td><span class="fw-normal">{{ $row->id }}</span></td>
+                            <td><span class="fw-normal">{{ $row->nama }}</span></td>
+                            <td><span class="fw-normal">{{ $row->alamat }}</span></td>
+                            <td><span class="fw-normal">{{ $row->nik }}</span></td>
+                            <td><span class="fw-normal">{{ $row->no_wa }}</span></td>
+                            <td><span class="fw-normal">{{ $row->no_telp }}</span></td>
+                            <td><span class="fw-normal">{{ $row->created_by }}</span></td>
+                            <td><span class="fw-normal">{{ $row->edited_by }}</span></td>
+                            <td><span class="fw-normal">{{ $row->created_at }}</span></td>
+                            <td><span class="fw-normal">{{ $row->updated_at }}</span></td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="/seePemilik/{{ $pemilik->id }}" class="btn btn-info btn-sm">Lihat</a>
+                                    <a href="/seePemilik/{{ $row->id }}" class="btn btn-info btn-sm">Lihat</a>
                                     @auth
-                                    <a href="/showPemilik/{{ $pemilik->id }}" class="btn btn-warning btn-sm">Edit</a>
-                                    <a href="/deletePemilik/{{ $pemilik->id }}" class="btn btn-danger btn-sm">Hapus</a>
+                                    <a href="/showPemilik/{{ $row->id }}" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="/deletePemilik/{{ $row->id }}" class="btn btn-danger btn-sm">Hapus</a>
                                     @endauth
                                 </div>
                             </td>
@@ -71,6 +71,7 @@
                     @endforeach
                 </tbody>
             </table>
+            {{ $pemilik->links() }}
         </div>
         
     </div>

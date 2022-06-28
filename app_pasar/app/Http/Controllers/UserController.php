@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function index(Request $request)
     {
-        $user = User::paginate();
+        $user = User::paginate(5);
 
         return view('users.index', compact('user'));
     }

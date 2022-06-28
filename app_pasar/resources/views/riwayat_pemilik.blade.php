@@ -62,6 +62,7 @@
                     @endforeach
                 </tbody>
             </table>
+            {{ $riwayat_pemilik->links() }}
         </div>
         
     </div>

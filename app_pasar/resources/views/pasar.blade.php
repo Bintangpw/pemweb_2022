@@ -43,22 +43,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($pasar as $pasar)
+                    @foreach ($pasar as $row)
                         <tr>
-                            <td><span class="fw-normal">{{ $pasar->id }}</span></td>
-                            <td><span class="fw-normal">{{ $pasar->nama }}</span></td>
-                            <td><span class="fw-normal">{{ $pasar->alamat }}</span></td>
-                            <td><span class="fw-normal">{{ $pasar->kode_pasar }}</span></td>
-                            <td><span class="fw-normal">{{ $pasar->created_by }}</span></td>
-                            <td><span class="fw-normal">{{ $pasar->edited_by }}</span></td>
-                            <td><span class="fw-normal">{{ $pasar->created_at }}</span></td>
-                            <td><span class="fw-normal">{{ $pasar->updated_at }}</span></td>
+                            <td><span class="fw-normal">{{ $row->id }}</span></td>
+                            <td><span class="fw-normal">{{ $row->nama }}</span></td>
+                            <td><span class="fw-normal">{{ $row->alamat }}</span></td>
+                            <td><span class="fw-normal">{{ $row->kode_pasar }}</span></td>
+                            <td><span class="fw-normal">{{ $row->created_by }}</span></td>
+                            <td><span class="fw-normal">{{ $row->edited_by }}</span></td>
+                            <td><span class="fw-normal">{{ $row->created_at }}</span></td>
+                            <td><span class="fw-normal">{{ $row->updated_at }}</span></td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="/seePasar/{{ $pasar->id }}" class="btn btn-info btn-sm">Lihat</a>
+                                    <a href="/seePasar/{{ $row->id }}" class="btn btn-info btn-sm">Lihat</a>
                                     @auth
-                                    <a href="/showPasar/{{ $pasar->id }}" class="btn btn-warning btn-sm">Edit</a>
-                                    <a href="/deletePasar/{{ $pasar->id }}" class="btn btn-danger btn-sm">Hapus</a>
+                                    <a href="/showPasar/{{ $row->id }}" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="/deletePasar/{{ $row->id }}" class="btn btn-danger btn-sm">Hapus</a>
                                     @endauth
                                 </div>
                             </td>
@@ -66,6 +66,7 @@
                     @endforeach
                 </tbody>
             </table>
+            {{ $pasar->links() }}
         </div>
     </div>
 @endsection

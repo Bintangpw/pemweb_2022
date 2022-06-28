@@ -47,25 +47,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($tenant as $tenant)
+                    @foreach ($tenant as $row)
                         <tr>
-                            <td><span class="fw-normal">{{ $tenant->id }}</span></td>
-                            <td><span class="fw-normal">{{ $tenant->nama }}</span></td>
-                            <td><span class="fw-normal">{{ $tenant->id_pemilik }}</span></td>
-                            <td><span class="fw-normal">{{ $tenant->latitude_tenant }}</span></td>
-                            <td><span class="fw-normal">{{ $tenant->longitude_tenant }}</span></td>
-                            <td><span class="fw-normal">{{ $tenant->harga_iuran }}</span></td>
-                            <td><span class="fw-normal">{{ $tenant->id_pasar }}</span></td>
-                            <td><span class="fw-normal">{{ $tenant->created_by }}</span></td>
-                            <td><span class="fw-normal">{{ $tenant->edited_by }}</span></td>
-                            <td><span class="fw-normal">{{ $tenant->created_at }}</span></td>
-                            <td><span class="fw-normal">{{ $tenant->updated_at }}</span></td>
+                            <td><span class="fw-normal">{{ $row->id }}</span></td>
+                            <td><span class="fw-normal">{{ $row->nama }}</span></td>
+                            <td><span class="fw-normal">{{ $row->id_pemilik }}</span></td>
+                            <td><span class="fw-normal">{{ $row->latitude_tenant }}</span></td>
+                            <td><span class="fw-normal">{{ $row->longitude_tenant }}</span></td>
+                            <td><span class="fw-normal">{{ $row->harga_iuran }}</span></td>
+                            <td><span class="fw-normal">{{ $row->id_pasar }}</span></td>
+                            <td><span class="fw-normal">{{ $row->created_by }}</span></td>
+                            <td><span class="fw-normal">{{ $row->edited_by }}</span></td>
+                            <td><span class="fw-normal">{{ $row->created_at }}</span></td>
+                            <td><span class="fw-normal">{{ $row->updated_at }}</span></td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="/seeTenant/{{ $tenant->id }}" class="btn btn-info btn-sm">Lihat</a>
+                                    <a href="/seeTenant/{{ $row->id }}" class="btn btn-info btn-sm">Lihat</a>
                                     @auth
-                                    <a href="/showTenant/{{ $tenant->id }}" class="btn btn-warning btn-sm">Edit</a>
-                                    <a href="/deleteTenant/{{ $tenant->id }}" class="btn btn-danger btn-sm">Hapus</a>
+                                    <a href="/showTenant/{{ $row->id }}" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="/deleteTenant/{{ $row->id }}" class="btn btn-danger btn-sm">Hapus</a>
                                     @endauth
                                     
                                 </div>
@@ -74,6 +74,7 @@
                     @endforeach
                 </tbody>
             </table>
+            {{ $tenant->links() }}
         </div>
         
     </div>

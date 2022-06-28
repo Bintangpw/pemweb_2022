@@ -43,21 +43,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($pengelola as $pengelola)
+                    @foreach ($pengelola as $row)
                         <tr>
-                            <td><span class="fw-normal">{{ $pengelola->id }}</span></td>
-                            <td><span class="fw-normal">{{ $pengelola->nama }}</span></td>
-                            <td><span class="fw-normal">{{ $pengelola->id_pasar }}</span></td>
-                            <td><span class="fw-normal">{{ $pengelola->created_by }}</span></td>
-                            <td><span class="fw-normal">{{ $pengelola->edited_by }}</span></td>
-                            <td><span class="fw-normal">{{ $pengelola->created_at }}</span></td>
-                            <td><span class="fw-normal">{{ $pengelola->updated_at }}</span></td>
+                            <td><span class="fw-normal">{{ $row->id }}</span></td>
+                            <td><span class="fw-normal">{{ $row->nama }}</span></td>
+                            <td><span class="fw-normal">{{ $row->id_pasar }}</span></td>
+                            <td><span class="fw-normal">{{ $row->created_by }}</span></td>
+                            <td><span class="fw-normal">{{ $row->edited_by }}</span></td>
+                            <td><span class="fw-normal">{{ $row->created_at }}</span></td>
+                            <td><span class="fw-normal">{{ $row->updated_at }}</span></td>
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="/seePengelola/{{ $pengelola->id }}" class="btn btn-info btn-sm">Lihat</a>
+                                    <a href="/seePengelola/{{ $row->id }}" class="btn btn-info btn-sm">Lihat</a>
                                     @auth
-                                    <a href="/showPengelola/{{ $pengelola->id }}" class="btn btn-warning btn-sm">Edit</a>
-                                    <a href="/deletePengelola/{{ $pengelola->id }}" class="btn btn-danger btn-sm">Hapus</a>
+                                    <a href="/showPengelola/{{ $row->id }}" class="btn btn-warning btn-sm">Edit</a>
+                                    <a href="/deletePengelola/{{ $row->id }}" class="btn btn-danger btn-sm">Hapus</a>
                                     @endauth
                                     
                                 </div>
@@ -66,6 +66,7 @@
                     @endforeach
                 </tbody>
             </table>
+            {{ $pengelola->links() }}
         </div>
         
     </div>
